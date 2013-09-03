@@ -1,0 +1,7 @@
+(load-file "~/.emacs.d/site-lisp/term-plus-el/lib/subdirs.el")
+(add-subdirs-to-load-path "~/.emacs.d/site-lisp/term-plus-el/")
+(require 'term+)
+(require 'term+mux)
+(require 'xterm-256color)
+(require 'key-intercept)
+(require 'multi-mode-util)

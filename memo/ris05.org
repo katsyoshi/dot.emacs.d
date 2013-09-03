@@ -1,0 +1,82 @@
+* title and abstract
+** ja
+*** title
+教育クラウドにおけるDEVaaSの提案
+
+*** abst
+現在，学生が利用しているPCは制限ユーザとして利用されているため，
+操作に制限が掛かってしまう．そのため，さまざまなプログラミング
+言語を試すことが困難である．そこで，クラウド環境を用いて，開発
+環境をサービスとして提供することを提案する．本論文では，
+Development as a Service(DEVaaS)とする．この開発環境を提供する
+クラウドシステムでは，Bug Tracking System(BTS)を用いて情報の共有，
+継続的インテグレーションシステムを用いた自動ビルド，自動テストの
+実行，バージョン管理システムでチーム開発のサポート，人気の高い
+プログラミング言語を中心として提供する．本研究では，このクラウド
+サービスを学内クラウドのUbuntu Enterprise Cloud(UEC)上で構築する
+ことを提案する．
+
+** en
+*** title
+A Proposal of DEVaaS in Educational Cloud
+
+*** abst
+Students are using PCs as restricted users and therefore, their operations are limited.
+Therefore, students cannot do virious programming languages
+on student's pc. We proposed that privide development environment
+in Educational Clound. In this paper calls DEVaaS(Development as
+a Service). In this cloud system, we provide
+Bug Tracking, Continuous Integration Tools, Version Control System,
+and famous programming languages.
+In this paper, we propose that provide DEVaaS in Educational Cloud.
+
+* やること
+** BTS
+Redmine
+Trac
+影舞
+
+** CI tools
+JenkinsCI
+TraviceCI
+
+** Version Control System
+Git
+Subversion
+Mercurial
+Bazzar
+
+** Support Language
+Java: Scala, Groovy, JRuby, Jython
+C/C++/Objective-C: GCC
+MONO: .NET Framework: C#, VB, F#...
+PHP
+Server-side JavaScripts: node.js
+Perl
+Python
+Ruby
+Haskell:GHC
+D
+
+** Support Web Framework
+Ruby: Rails, Sinatra, Padrino
+Python: Django
+PHP: CakePHP
+
+** Support Testing Framework
+Ruby: Rspec
+Java: JUnit3, JUnit4
+
+** Support Database
+MySQL
+PostgreSQL
+MongoDB
+SQLite3
+
+** Next Target
+*** MapReduce
+Hadoop
+Asakusa
+
+*** Distributed Machine Learning Framework
+    Jubauts
