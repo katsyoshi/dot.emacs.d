@@ -1,1 +1,16 @@
 /**/*.elc
+/**/*.png
+/**/*.dat
+/**/*.jpg
+/**/*.gif
+/**/*.doc
+/.bzrignore
+/abbrev_defs
+/tutorial/
+/tramp
+/cacoo
+/ac-comphist.dat
+/anything-c-adaptive-history
+/auto-install
+/eproject.lst
+

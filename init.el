@@ -10,7 +10,8 @@
 (global-set-key (kbd "C-x j") 'goto-line)
 ;; パス設定
 (load "~/.emacs.d/settings/mac.el") ;; Exec-path
-
+;; バッファリスト
+(global-set-key (kbd "C-x C-b") 'buffer-menu)
 ;; Load PATH
 (let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
  (add-to-list 'load-path default-directory)
@@ -50,19 +51,23 @@
 ;; yspel
 (require 'yspel)
 ;; anything
-(require 'anything-startup)
-;; (require 'jaspace)
+;; (require 'anything-startup)
+;; helm
+(require 'helm-config)
+
+;; ;; (require 'jaspace)
 ;; shell
-(setq system-uses-terminfo nil)
-(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-(require 'multi-term)
-(require 'zlc)
+;; (setq system-uses-terminfo nil)
+;; (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+;; (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+;; (require 'multi-term)
+;; (require 'zlc)
 
 ;; emacs daemons
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
 
 ;; ウインドウのサイズとツールバーの表示
 (if window-system
@@ -78,7 +83,8 @@
       (tool-bar-mode 0)
       ;; fullscreen
       (if ns-use-native-fullscreen
-          (global-set-key [(meta return)] 'toggle-frame-fullscreen))
+          (progn
+             (global-set-key [(meta return)] 'toggle-frame-fullscreen)))
       ;; Cacoo
       ;;(load "~/.emacs.d/settings/cacoo.el")
       ;; 画像表示
@@ -87,60 +93,29 @@
       ;; window分割
       (load "~/.emacs.d/settings/window.el")))
 ;; Pop Win
-(require 'popwin)
-
+;;(require 'popwin)
+(require 'flycheck)
 ;; 矩形選択
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
 (global-set-key (kbd "C-c C-]") 'cua-set-rectangle-mark)
-;; ebuild-mode
-;;(require 'gentoo-syntax)
-;;(require 'ebuild-mode)
 ;; yspel.el
 (require 'yspel)
 
-;; 時間表示
-(display-time)
-;; Tab Width Settings
-(load "~/.emacs.d/settings/tab.el")
-
-;; backup
+;; ;; backup
 (setq make-backup-files t)
 (setq backup-directory-alist
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
-;;(load "~/.emacs.d/settings/auto-install.el") ;; Auto Install
 (load "~/.emacs.d/settings/skk.el") ;; SKK
 (load "~/.emacs.d/settings/fonts23.el") ;; font settings
 (load "~/.emacs.d/settings/ruby.el") ;; Ruby
 (load "~/.emacs.d/settings/yatex.el");; YaTeX
-;;(load "~/.emacs.d/settings/clang.el");; C Lang
-;;(load "~/.emacs.d/settings/haskell.el");; Haskell
+(load "~/.emacs.d/settings/clang.el");; C Lang
 (load "~/.emacs.d/settings/yaml.el") ;; Yaml
-;; (load "~/.emacs.d/settings/scala.el");; Scala
-;;(load "~/.emacs.d/settings/twitter.el");; Twitter
-;; (load "~/.emacs.d/settings/erlang.el");; Erlang
-;; (load "~/.emacs.d/settings/bzr.el") ;;Bazzarr
-;; (load "~/.emacs.d/settings/python.el");; python tab
-(load "~/.emacs.d/settings/erc.el")   ;; erc
 (load "~/.emacs.d/settings/complete.el");;auto-complete
 (load "~/.emacs.d/settings/javascript.el") ;; javascript
-;; (load "~/.emacs.d/settings/arduino.el");;Arduino
-(load "~/.emacs.d/settings/yasnippet.el");; Snippet
-;; (load "~/.emacs.d/settings/rabbit.el");;Rabbit
 (load "~/.emacs.d/settings/markdown.el");;markdown
-(require 'haml-mode)
-
+(load "~/.emacs.d/settings/rails.el");;rails
+(load "~/.emacs.d/settings/github.el");;github
 (require 'w3m-load)
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(git-baseline-alist (quote (("/Users/katsu/Program/Ruby/MikutterPlugins/fav/" . "master"))) t))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
