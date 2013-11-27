@@ -1,0 +1,36 @@
+[submodule "site-lisp/helm"]
+	path = site-lisp/helm
+	url = git://github.com/emacs-helm/helm.git
+[submodule "site-lisp/coffee-mode"]
+	path = site-lisp/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git
+[submodule "site-lisp/dash.el"]
+	path = site-lisp/dash.el
+	url = git://github.com/magnars/dash.el
+[submodule "site-lisp/dash"]
+	path = site-lisp/dash
+	url = git://github.com/magnars/dash.el
+[submodule "site-lisp/f"]
+	path = site-lisp/f
+	url = git://github.com/rejeep/f.el
+[submodule "site-lisp/flycheck"]
+	path = site-lisp/flycheck
+	url = git://github.com/flycheck/flycheck.git
+[submodule "site-lisp/s"]
+	path = site-lisp/s
+	url = https://github.com/magnars/s.el.git
+[submodule "site-lisp/flymake-coffee"]
+	path = site-lisp/flymake-coffee
+	url = git://github.com/purcell/flymake-coffee.git
+[submodule "site-lisp/sass-mode"]
+	path = site-lisp/sass-mode
+	url = git://github.com/nex3/sass-mode.git
+[submodule "site-lisp/flymake-easy"]
+	path = site-lisp/flymake-easy
+	url = git://github.com/purcell/flymake-easy.git
+[submodule "site-lisp/gh"]
+	path = site-lisp/gh
+	url = git://github.com/sigma/gh.el.git
+[submodule "site-lisp/github"]
+	path = site-lisp/github
+	url = git://github.com/abhiyerra/github.el.git
