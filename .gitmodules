@@ -4,9 +4,6 @@
 [submodule "site-lisp/coffee-mode"]
 	path = site-lisp/coffee-mode
 	url = git://github.com/defunkt/coffee-mode.git
-[submodule "site-lisp/dash.el"]
-	path = site-lisp/dash.el
-	url = git://github.com/magnars/dash.el
 [submodule "site-lisp/dash"]
 	path = site-lisp/dash
 	url = git://github.com/magnars/dash.el
@@ -34,9 +31,6 @@
 [submodule "site-lisp/github"]
 	path = site-lisp/github
 	url = git://github.com/abhiyerra/github.el.git
-[submodule "site-lisp/auto-complete"]
-	path = site-lisp/auto-complete
-	url = git://github.com/m2ym/auto-complete.git
 [submodule "site-lisp/scala-mode2"]
 	path = site-lisp/scala-mode2
 	url = git://github.com/hvesalai/scala-mode2.git
@@ -49,3 +43,9 @@
 [submodule "site-lisp/haml-mode"]
 	path = site-lisp/haml-mode
 	url = git://github.com/nex3/haml-mode.git
+[submodule "site-lisp/auto-complete"]
+	path = site-lisp/auto-complete
+	url = https://github.com/auto-complete/auto-complete
+[submodule "site-lisp/popup"]
+	path = site-lisp/popup
+	url = git://github.com/auto-complete/popup-el.git
