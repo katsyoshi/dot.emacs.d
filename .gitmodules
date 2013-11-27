@@ -43,3 +43,9 @@
 [submodule "site-lisp/haskell-mode"]
 	path = site-lisp/haskell-mode
 	url = git://github.com/haskell/haskell-mode.git
+[submodule "site-lisp/popwin"]
+	path = site-lisp/popwin
+	url = git://github.com/m2ym/popwin-el.git
+[submodule "site-lisp/haml-mode"]
+	path = site-lisp/haml-mode
+	url = git://github.com/nex3/haml-mode.git
