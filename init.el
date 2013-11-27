@@ -89,11 +89,10 @@
       ;;(load "~/.emacs.d/settings/cacoo.el")
       ;; 画像表示
       (auto-image-file-mode t)
-      (auto-compression-mode t)
+      (auto-compression-mode t)))
       ;; window分割
-      (load "~/.emacs.d/settings/window.el")))
-;; Pop Win
-;;(require 'popwin)
+      ;;(load "~/.emacs.d/settings/window.el")))
+
 (require 'flycheck)
 ;; 矩形選択
 (cua-mode t)
@@ -118,4 +117,5 @@
 (load "~/.emacs.d/settings/markdown.el");;markdown
 (load "~/.emacs.d/settings/rails.el");;rails
 (load "~/.emacs.d/settings/github.el");;github
+(load "~/.emacs.d/settings/haskell.el");
 (require 'w3m-load)
