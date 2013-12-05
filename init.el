@@ -54,6 +54,7 @@
 ;; (require 'anything-startup)
 ;; helm
 (require 'helm-config)
+(require 'helm-mode)
 
 ;; ;; (require 'jaspace)
 ;; shell

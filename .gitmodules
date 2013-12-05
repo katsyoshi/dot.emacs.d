@@ -49,3 +49,6 @@
 [submodule "site-lisp/popup"]
 	path = site-lisp/popup
 	url = git://github.com/auto-complete/popup-el.git
+[submodule "site-lisp/markdown-mode"]
+	path = site-lisp/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
