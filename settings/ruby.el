@@ -10,5 +10,6 @@
 (autoload 'inf-ruby-keys
   "inf-ruby" "Set local key defs for inf-ruby in ruby-mode")
 
-;; Ruby
+(setq ruby-insert-encoding-magic-comment nil)
+;; Flycheck
 (add-hook 'ruby-mode-hook 'flycheck-mode)

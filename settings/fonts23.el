@@ -17,10 +17,6 @@
        (frame-parameter nil 'font)
        'japanese-jisx0212
        '("Hiragino Maru Gothic Pro" . "iso10646-1"))
-      ;; (set-fontset-font
-      ;;  (frame-parameter nil 'font)
-      ;;  'mule-unicode-0100-24ff
-      ;;  '("menlo" . "iso10646-1"))
       (setq face-font-rescale-alist
             '(("^-apple-hiragino.*" . 1.2)
               (".*osaka-bold.*" . 1.2)
@@ -34,9 +30,3 @@
       (set-face-attribute 'default nil
                           :family "Ricty"
                           :height 110))))
-;;  (if (eq window-system 'x)
-;; Carbonの設定
-(when (= emacs-major-version 22)
-  (when (eq window-system 'mac)
-    (load "mac-fonts/carbon-font")
-    (require 'carbon-font)))

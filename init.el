@@ -10,8 +10,6 @@
 (global-set-key (kbd "C-x j") 'goto-line)
 ;; パス設定
 (load "~/.emacs.d/settings/mac.el") ;; Exec-path
-;; バッファリスト
-(global-set-key (kbd "C-x C-b") 'buffer-menu)
 ;; Load PATH
 (let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
  (add-to-list 'load-path default-directory)
@@ -47,14 +45,17 @@
 ;; クリップコード
 (setq x-select-enable-clipboard t)
 ;; batch files
-(require 'generic-x)
+;; (require 'generic-x)
 ;; yspel
-(require 'yspel)
+;; (require 'yspel)
 ;; anything
 ;; (require 'anything-startup)
 ;; helm
 (require 'helm-config)
 (helm-mode 1)
+;; バッファリスト
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+
 
 ;; ;; (require 'jaspace)
 ;; shell
@@ -63,12 +64,10 @@
 ;; (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 ;; (require 'multi-term)
 ;; (require 'zlc)
-
 ;; emacs daemons
 (require 'server)
 (unless (server-running-p)
   (server-start))
-
 
 ;; ウインドウのサイズとツールバーの表示
 (if window-system
@@ -82,10 +81,6 @@
       (set-frame-parameter (selected-frame) 'alpha '(90 90))
       ;; tool-bar表示オフ
       (tool-bar-mode 0)
-      ;; fullscreen
-      (if ns-use-native-fullscreen
-          (progn
-             (global-set-key [(meta return)] 'toggle-frame-fullscreen)))
       ;; Cacoo
       ;;(load "~/.emacs.d/settings/cacoo.el")
       ;; 画像表示
@@ -93,8 +88,9 @@
       (auto-compression-mode t)))
       ;; window分割
       ;;(load "~/.emacs.d/settings/window.el")))
-
+;; flycheck
 (require 'flycheck)
+
 ;; 矩形選択
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
@@ -107,6 +103,7 @@
 (setq backup-directory-alist
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
+(load "~/.emacs.d/settings/git.el") ;; Git
 (load "~/.emacs.d/settings/skk.el") ;; SKK
 (load "~/.emacs.d/settings/fonts23.el") ;; font settings
 (load "~/.emacs.d/settings/ruby.el") ;; Ruby
@@ -117,6 +114,6 @@
 (load "~/.emacs.d/settings/javascript.el") ;; javascript
 (load "~/.emacs.d/settings/markdown.el");;markdown
 (load "~/.emacs.d/settings/rails.el");;rails
-(load "~/.emacs.d/settings/github.el");;github
 (load "~/.emacs.d/settings/haskell.el");
 (require 'w3m-load)
+
