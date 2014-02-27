@@ -3,3 +3,10 @@
 (require 'coffee-mode)
 (require 'flymake-coffee)
 (add-hook 'coffee-mode-hook 'flymake-coffee-load)
+
+(require 'helm-rails)
+(define-key global-map (kbd "M-p M-c") 'helm-rails-controllers)
+(define-key global-map (kbd "M-p M-m") 'helm-rails-models)
+(define-key global-map (kbd "M-p M-u") 'helm-rails-views)
+(define-key global-map (kbd "M-p M-s") 'helm-rails-specs)
+(define-key global-map (kbd "M-p M-r") 'helm-rails-all)
