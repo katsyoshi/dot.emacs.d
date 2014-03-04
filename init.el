@@ -1,13 +1,19 @@
 ;; .emacs.d/init.el
 ;; set font and background color
-(set-background-color "black")
-(set-foreground-color "white")
+(set-background-color "#98bc98")
+(set-foreground-color "black")
 ;; バックスペース
 (global-set-key (kbd "C-h") 'delete-backward-char)
 ;; ヘルプ
 (global-set-key (kbd "C-c h") 'help)
 ;; jump
 (global-set-key (kbd "C-x j") 'goto-line)
+;; ウィンドウ移動
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+
 ;; パス設定
 (load "~/.emacs.d/settings/mac.el") ;; Exec-path
 ;; Load PATH
