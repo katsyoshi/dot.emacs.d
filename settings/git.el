@@ -4,7 +4,7 @@
 (require 'gitconfig-mode)
 (require 'gitignore-mode)
 (require 'gitattributes-mode)
-(global-set-key (kbd "M-g M-b") 'magit-branch)
+(global-set-key (kbd "M-g M-b") 'magit-branch-manager)
 (global-set-key (kbd "M-g M-c") 'magit-checkout)
 (global-set-key (kbd "M-g M-g") 'git-commit)
 (global-set-key (kbd "M-g M-r") 'git-rebase)

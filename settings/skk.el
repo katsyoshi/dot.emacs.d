@@ -16,4 +16,4 @@
 ;; 漢字変換のとき、Enterキーを入力すると変換決定
 (setq skk-egg-like-newline t)
 ;; 句読点変更
-(setq-default skk-kutouten-type 'en)
+(setq-default skk-kutouten-type 'jp)

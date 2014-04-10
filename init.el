@@ -14,6 +14,10 @@
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 
+;; set key maps
+(global-set-key (kbd "C-c C-a") 'align-regexp)
+(setq indent-tabs-mode nil)
+
 ;; パス設定
 (load "~/.emacs.d/settings/mac.el") ;; Exec-path
 ;; Load PATH
@@ -59,10 +63,10 @@
 ;; helm
 (require 'helm-config)
 (helm-mode 1)
+
 ;; バッファリスト
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-
-
+(define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 ;; ;; (require 'jaspace)
 ;; shell
 ;; (setq system-uses-terminfo nil)
