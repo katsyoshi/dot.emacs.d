@@ -13,4 +13,5 @@
 /anything-c-adaptive-history
 /auto-install
 /eproject.lst
-
+/elpa
+/**/*.org*

@@ -125,5 +125,6 @@
 (load "~/.emacs.d/settings/markdown.el");;markdown
 (load "~/.emacs.d/settings/rails.el");;rails
 (load "~/.emacs.d/settings/haskell.el");
+(load "~/.emacs.d/settings/html.el")
 (require 'w3m-load)
 
