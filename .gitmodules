@@ -82,3 +82,6 @@
 [submodule "site-lisp/web-mode"]
 	path = site-lisp/web-mode
 	url = git://github.com/fxbois/web-mode.git
+[submodule "site-lisp/lua-mode"]
+	path = site-lisp/lua-mode
+	url = https://github.com/immerrr/lua-mode.git
