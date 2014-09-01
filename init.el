@@ -126,5 +126,6 @@
 (load "~/.emacs.d/settings/rails.el");;rails
 (load "~/.emacs.d/settings/haskell.el");
 (load "~/.emacs.d/settings/html.el")
+(require 'lua-mode) ;; lua-mode
 (require 'w3m-load)
 
