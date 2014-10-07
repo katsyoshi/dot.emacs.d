@@ -16,7 +16,7 @@
 
 ;; set key maps
 (global-set-key (kbd "C-c C-a") 'align-regexp)
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 ;; パス設定
 (load "~/.emacs.d/settings/mac.el") ;; Exec-path
