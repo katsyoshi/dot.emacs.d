@@ -29,7 +29,7 @@
     (progn
       (set-face-attribute 'default nil
                           :family "Ricty"
-                          :height 100))))
+                          :height 80))))
 
 (global-set-key (kbd "M-C-<up>") 'text-scale-increase)
 (global-set-key (kbd "M-C-<down>") 'text-scale-decrease)
