@@ -18,4 +18,4 @@
 ;; 句読点変更
 (setq-default skk-kutouten-type 'jp)
 ;; Aspell
-(setq-default ispell-program-name "aspell") 
+(setq-default ispell-program-name "aspell")

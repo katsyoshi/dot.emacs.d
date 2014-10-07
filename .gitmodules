@@ -85,3 +85,6 @@
 [submodule "site-lisp/lua-mode"]
 	path = site-lisp/lua-mode
 	url = https://github.com/immerrr/lua-mode.git
+[submodule "site-lisp/go-mode"]
+	path = site-lisp/go-mode
+	url = https://github.com/dominikh/go-mode.el.git
