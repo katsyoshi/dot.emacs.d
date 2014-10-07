@@ -17,3 +17,5 @@
 (setq skk-egg-like-newline t)
 ;; 句読点変更
 (setq-default skk-kutouten-type 'jp)
+;; Aspell
+(setq-default ispell-program-name "aspell") 
