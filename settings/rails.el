@@ -1,4 +1,5 @@
 (require 'haml-mode)
+(require 'slim-mode)
 (require 'sass-mode)
 (require 'coffee-mode)
 (require 'feature-mode)

@@ -27,9 +27,7 @@
               ("-cdac$" . 1.3)))))
   (when (eq window-system 'x)
     (progn
-      (set-face-attribute 'default nil
-                          :family "Ricty"
-                          :height 140))))
+      (add-to-list 'default-frame-alist '(font . "ricty-14")))))
 
 (global-set-key (kbd "M-C-<up>") 'text-scale-increase)
 (global-set-key (kbd "M-C-<down>") 'text-scale-decrease)
