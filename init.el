@@ -63,6 +63,7 @@
 ;; helm
 (require 'helm-config)
 (helm-mode 1)
+(global-set-key (kbd "C-c C-v") 'helm-show-kill-ring)
 
 ;; バッファリスト
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
