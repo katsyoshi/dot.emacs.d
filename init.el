@@ -64,6 +64,7 @@
 (require 'helm-config)
 (helm-mode 1)
 (global-set-key (kbd "C-c C-v") 'helm-show-kill-ring)
+(global-set-key (kbd "C-c C-l") 'goto-line)
 
 ;; バッファリスト
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
@@ -129,4 +130,3 @@
 (load "~/.emacs.d/settings/html.el")
 (require 'lua-mode) ;; lua-mode
 (require 'w3m-load)
-
