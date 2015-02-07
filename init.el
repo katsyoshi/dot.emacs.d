@@ -6,14 +6,11 @@
 (global-set-key (kbd "C-h") 'delete-backward-char)
 ;; ヘルプ
 (global-set-key (kbd "C-c h") 'help)
-;; jump
-(global-set-key (kbd "C-x j") 'goto-line)
 ;; ウィンドウ移動
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
-
 ;; set key maps
 (global-set-key (kbd "C-c C-a") 'align-regexp)
 (setq-default indent-tabs-mode nil)
@@ -101,7 +98,7 @@
       ;; window分割
       ;;(load "~/.emacs.d/settings/window.el")))
 ;; flycheck
-(require 'flycheck)
+;; (require 'flycheck)
 
 ;; 矩形選択
 (cua-mode t)
@@ -115,6 +112,7 @@
 (setq backup-directory-alist
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
+(load "~/.emacs.d/settings/complete.el");;auto-complete
 (load "~/.emacs.d/settings/git.el") ;; Git
 (load "~/.emacs.d/settings/skk.el") ;; SKK
 (load "~/.emacs.d/settings/fonts23.el") ;; font settings
@@ -122,7 +120,6 @@
 (load "~/.emacs.d/settings/yatex.el");; YaTeX
 (load "~/.emacs.d/settings/clang.el");; C Lang
 (load "~/.emacs.d/settings/yaml.el") ;; Yaml
-(load "~/.emacs.d/settings/complete.el");;auto-complete
 (load "~/.emacs.d/settings/javascript.el") ;; javascript
 (load "~/.emacs.d/settings/markdown.el");;markdown
 (load "~/.emacs.d/settings/rails.el");;rails
