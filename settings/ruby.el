@@ -27,4 +27,4 @@
 
 (setq ruby-insert-encoding-magic-comment nil)
 ;; Flycheck
-(add-hook 'ruby-mode-hook 'flycheck-mode)
+;; (add-hook 'ruby-mode-hook 'flycheck-mode)

@@ -2,13 +2,7 @@
 (when (>= emacs-major-version 23)
   (when (eq window-system 'ns)
     (progn
-      (set-face-attribute 'default nil
-                          :family "Ricty"
-                          :height 140)
-      (set-fontset-font
-       (frame-parameter nil 'font)
-       'japanese-jisx0208
-       '("Ricty" . "iso10646-1"))
+      (set-face-attribute 'default nil :family "Ricty" :height 120)
       (set-fontset-font
        (frame-parameter nil 'font)
        'japanese-jisx0208
@@ -27,7 +21,7 @@
               ("-cdac$" . 1.3)))))
   (when (eq window-system 'x)
     (progn
-      (add-to-list 'default-frame-alist '(font . "ricty-14")))))
+      (set-face-attribute 'default nil :family "DejaVu" :height 120))))
 
 (global-set-key (kbd "M-C-<up>") 'text-scale-increase)
 (global-set-key (kbd "M-C-<down>") 'text-scale-decrease)
