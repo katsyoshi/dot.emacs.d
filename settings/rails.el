@@ -3,7 +3,7 @@
 (autoload 'sass-mode    "sass-mode" "edit sass sources")
 (autoload 'coffee-mode  "coffee-mode" "edit coffeescript sources")
 (autoload 'feature-mode "feature-mode" "edit feature sources")
-;; (require  'flymake-coffee)
+(require  'flymake-coffee)
 
 (custom-set-variables '(coffee-tab-width 2))
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
