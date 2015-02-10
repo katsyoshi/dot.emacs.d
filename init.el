@@ -17,6 +17,9 @@
 
 ;; パス設定
 (load "~/.emacs.d/settings/mac.el") ;; Exec-path
+;; いんすとーるぱっけーじもーで
+(load "~/.emacs.d/settings/package.el")
+
 ;; Load PATH
 (let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
  (add-to-list 'load-path default-directory)
