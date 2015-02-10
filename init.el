@@ -54,12 +54,6 @@
 ;; clipboard
 ;; クリップコード
 (setq x-select-enable-clipboard t)
-;; batch files
-;; (require 'generic-x)
-;; yspel
-;; (require 'yspel)
-;; anything
-;; (require 'anything-startup)
 ;; helm
 (require 'helm-config)
 (helm-mode 1)
@@ -69,13 +63,6 @@
 ;; バッファリスト
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
-;; ;; (require 'jaspace)
-;; shell
-;; (setq system-uses-terminfo nil)
-;; (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-;; (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-;; (require 'multi-term)
-;; (require 'zlc)
 ;; emacs daemons
 (require 'server)
 (unless (server-running-p)
@@ -101,32 +88,27 @@
       ;; window分割
       ;;(load "~/.emacs.d/settings/window.el")))
 ;; flycheck
-;; (require 'flycheck)
+(require 'flycheck)
 
 ;; 矩形選択
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
 (global-set-key (kbd "C-c C-]") 'cua-set-rectangle-mark)
-;; yspel.el
-(require 'yspel)
 
 ;; ;; backup
 (setq make-backup-files t)
 (setq backup-directory-alist
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
+
 (load "~/.emacs.d/settings/complete.el");;auto-complete
 (load "~/.emacs.d/settings/git.el") ;; Git
 (load "~/.emacs.d/settings/skk.el") ;; SKK
 (load "~/.emacs.d/settings/fonts23.el") ;; font settings
 (load "~/.emacs.d/settings/ruby.el") ;; Ruby
-(load "~/.emacs.d/settings/yatex.el");; YaTeX
 (load "~/.emacs.d/settings/clang.el");; C Lang
 (load "~/.emacs.d/settings/yaml.el") ;; Yaml
-(load "~/.emacs.d/settings/javascript.el") ;; javascript
 (load "~/.emacs.d/settings/markdown.el");;markdown
 (load "~/.emacs.d/settings/rails.el");;rails
-(load "~/.emacs.d/settings/haskell.el");
-(load "~/.emacs.d/settings/html.el")
-(require 'lua-mode) ;; lua-mode
+(load "~/.emacs.d/settings/lua.el");; lua
 (require 'w3m-load)
