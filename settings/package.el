@@ -9,7 +9,7 @@
 (defvar my/favorite-packages
   '(
     ;;;; for auto-complete
-    auto-complete fuzzy popup pos-tip
+    auto-complete fuzzy popup pos-tip yasnippet auto-yasnippet
 
     ;;;; buffer utils
     popwin elscreen yascroll buffer-move
