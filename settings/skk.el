@@ -4,7 +4,6 @@
  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
      (normal-top-level-add-subdirs-to-load-path)))
 ;; SKK
-(require 'skk-autoloads)
 (global-set-key (kbd "C-c C-j") 'skk-mode)
 (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
 (global-set-key (kbd "C-m") 'newline-and-indent)
