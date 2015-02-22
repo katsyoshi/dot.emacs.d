@@ -111,4 +111,4 @@
 (load "~/.emacs.d/settings/markdown.el");;markdown
 (load "~/.emacs.d/settings/rails.el");;rails
 (load "~/.emacs.d/settings/lua.el");; lua
-(require 'w3m-load)
+
