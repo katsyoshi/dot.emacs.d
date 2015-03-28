@@ -14,9 +14,6 @@
 ;; set key maps
 (global-set-key (kbd "C-c C-a") 'align-regexp)
 (setq-default indent-tabs-mode nil)
-
-;; パス設定
-(load "~/.emacs.d/settings/mac.el") ;; Exec-path
 ;; いんすとーるぱっけーじもーで
 (load "~/.emacs.d/settings/package.el")
 
@@ -25,6 +22,8 @@
  (add-to-list 'load-path default-directory)
  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
      (normal-top-level-add-subdirs-to-load-path)))
+;; パス設定
+(exec-path-from-shell-initialize)
 
 ;; whitespace
 (setq-default show-trailing-whitespace t)
@@ -111,4 +110,3 @@
 (load "~/.emacs.d/settings/markdown.el");;markdown
 (load "~/.emacs.d/settings/rails.el");;rails
 (load "~/.emacs.d/settings/lua.el");; lua
-
