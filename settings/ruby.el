@@ -10,6 +10,12 @@
 (autoload 'inf-ruby-keys
   "inf-ruby" "Set local key defs for inf-ruby in ruby-mode")
 
+;; flycheck ruby rubocop
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (setq flycheck-checker 'ruby-rubocop)
+             (flycheck-mode 1)))
+
 (defadvice ruby-indent-line (after unindent-closing-paren activate)
   (let ((column (current-column))
         indent offset)
@@ -24,7 +30,4 @@
     (when indent
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
-
 (setq ruby-insert-encoding-magic-comment nil)
-;; Flycheck
-(add-hook 'ruby-mode-hook 'flycheck-mode)
