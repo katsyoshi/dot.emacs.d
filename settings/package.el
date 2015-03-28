@@ -8,14 +8,17 @@
 ;; インストールするパッケージ
 (defvar my/favorite-packages
   '(
+    ;;;; system
+    exec-path-from-shell
+
     ;;;; for auto-complete
     auto-complete fuzzy popup pos-tip yasnippet auto-yasnippet
 
     ;;;; buffer utils
     popwin elscreen yascroll buffer-move
 
-    ;;;; flymake
-    flycheck flymake-jslint flymake-coffee
+    ;;;; flycheck
+    flycheck
 
     ;;;; helm
     helm
@@ -25,16 +28,16 @@
     gitattributes-mode
 
     ;;;; rails
-    haml-mode slim-mode sass-mode coffee-mode feature-mode flymake-ruby flymake-haml
+    haml-mode slim-mode sass-mode coffee-mode feature-mode
 
     ;;;; skk
     ddskk
 
     ;;;; text
-    yaml-mode markdown-mode flymake-yaml
+    yaml-mode markdown-mode
 
     ;;;; lang
-    lua-mode rust-mode flymake-lua flymake-rust
+    lua-mode rust-mode
     ))
 
 ;; my/favorite-packagesからインストールしていないパッケージをインストール
