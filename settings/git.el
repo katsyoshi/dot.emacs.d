@@ -9,3 +9,5 @@
 (global-set-key (kbd "M-g M-g") 'magit-status)
 (global-set-key (kbd "M-g M-u") 'magit-pull)
 (global-set-key (kbd "M-g M-s") 'vc-git-grep)
+(require 'magit-gh-pulls)
+(add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)
