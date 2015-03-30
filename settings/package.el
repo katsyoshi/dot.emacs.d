@@ -25,7 +25,7 @@
 
     ;;;; git
     magit git-gutter git-rebase-mode git-commit-mode gitconfig-mode gitignore-mode
-    gitattributes-mode
+    gitattributes-mode gh magit-gh-pulls
 
     ;;;; rails
     haml-mode slim-mode sass-mode coffee-mode feature-mode
