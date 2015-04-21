@@ -3,7 +3,6 @@
 (autoload 'sass-mode    "sass-mode" "edit sass sources")
 (autoload 'coffee-mode  "coffee-mode" "edit coffeescript sources")
 (autoload 'feature-mode "feature-mode" "edit feature sources")
-(require  'flymake-coffee)
 
 (custom-set-variables '(coffee-tab-width 2))
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
@@ -11,8 +10,10 @@
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
-(add-hook 'coffee-mode-hook 'flymake-coffee-load)
-(add-hook 'feature-mode-hook 'flycheck-mode)
+(add-hook 'coffee-mode-hook
+          '(lambda ()
+             (setq flycheck-checker 'coffee)
+             (flycheck-mode 1)))
 
 (define-key global-map (kbd "M-p M-c") 'helm-rails-controllers)
 (define-key global-map (kbd "M-p M-m") 'helm-rails-models)
