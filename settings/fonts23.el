@@ -21,7 +21,7 @@
               ("-cdac$" . 1.3)))))
   (when (eq window-system 'x)
     (progn
-      (set-face-attribute 'default nil :family "DejaVu" :height 120))))
+      (set-face-attribute 'default nil :family "DejaVu" :height 140))))
 
 (global-set-key (kbd "M-C-<up>") 'text-scale-increase)
 (global-set-key (kbd "M-C-<down>") 'text-scale-decrease)
