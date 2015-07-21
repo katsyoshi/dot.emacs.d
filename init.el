@@ -13,6 +13,7 @@
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 ;; set key maps
 (global-set-key (kbd "C-c C-a") 'align-regexp)
+(global-set-key (kbd "C-c C-r") 'revert-buffer)
 (setq-default indent-tabs-mode nil)
 ;; いんすとーるぱっけーじもーで
 (load "~/.emacs.d/settings/package.el")
