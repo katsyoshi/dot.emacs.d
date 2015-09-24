@@ -1,7 +1,0 @@
-(setq inferior-lisp-program "sbcl")
-(require 'slime)
-(slime-setup)
-(setq slime-net-coding-system 'utf-8-unix)
-;; (slime-autodoc-mode)
-(show-paren-mode)
-(setq transient-mark-mode t)
