@@ -111,3 +111,4 @@
 (load "~/.emacs.d/settings/markdown.el");;markdown
 (load "~/.emacs.d/settings/rails.el");;rails
 (load "~/.emacs.d/settings/lua.el");; lua
+(load "~/.emacs.d/settings/textile.el") ;; textile

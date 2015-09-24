@@ -2,7 +2,7 @@
 (when (>= emacs-major-version 23)
   (when (eq window-system 'ns)
     (progn
-      (set-face-attribute 'default nil :family "Ricty" :height 120)
+      (set-face-attribute 'default nil :family "Ricty" :height 240)
       (set-fontset-font
        (frame-parameter nil 'font)
        'japanese-jisx0208
@@ -18,7 +18,9 @@
               (".*courier-bold-.*-mac-roman" . 1.0)
               (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
               (".*monaco-bold-.*-mac-roman" . 0.9)
-              ("-cdac$" . 1.3)))))
+              ("-cdac$" . 1.3)))
+      (setq ns-command-modifier (quote meta))
+      (setq ns-alternate-modifier (quote super))))
   (when (eq window-system 'x)
     (progn
       (set-face-attribute 'default nil :family "VL Gothic" :height 140))))
