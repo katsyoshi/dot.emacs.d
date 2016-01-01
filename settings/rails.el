@@ -16,6 +16,9 @@
           '(lambda ()
              (setq flycheck-checker 'coffee)
              (flycheck-mode 1)))
+(add-hook 'web-mode-hook
+          '(lambda ()
+             (setq web-mode-markup-indent-offset 2)))
 
 (define-key global-map (kbd "M-p M-c") 'helm-rails-controllers)
 (define-key global-map (kbd "M-p M-m") 'helm-rails-models)
