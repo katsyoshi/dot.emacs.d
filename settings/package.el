@@ -33,7 +33,7 @@
     ddskk
 
     ;;;; text
-    yaml-mode markdown-mode
+    yaml-mode markdown-mode textile-mode
 
     ;;;; lang
     lua-mode rust-mode
