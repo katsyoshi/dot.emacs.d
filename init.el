@@ -62,7 +62,7 @@
 
 ;; バッファリスト
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-(define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-map (kbd "TAB") 'helm-execute-persistent-action)
 ;; emacs daemons
 (require 'server)
 (unless (server-running-p)
