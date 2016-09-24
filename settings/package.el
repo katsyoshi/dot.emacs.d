@@ -43,5 +43,3 @@
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
     (package-install package)))
-
-
