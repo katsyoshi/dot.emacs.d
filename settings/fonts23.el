@@ -23,7 +23,7 @@
       (setq ns-alternate-modifier (quote super))))
   (when (eq window-system 'x)
     (progn
-      (set-face-attribute 'default nil :family "VL Gothic" :height 140))))
+      (set-face-attribute 'default nil :family "Ricty" :height 120))))
 
 (global-set-key (kbd "M-C-<up>") 'text-scale-increase)
 (global-set-key (kbd "M-C-<down>") 'text-scale-decrease)
