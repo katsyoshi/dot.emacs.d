@@ -37,6 +37,9 @@
 
     ;;;; lang
     lua-mode rust-mode
+
+    ;; Dockerfile
+    dockerfile-mode
     ))
 
 ;; my/favorite-packagesからインストールしていないパッケージをインストール

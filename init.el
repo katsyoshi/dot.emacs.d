@@ -116,3 +116,4 @@
 (load "~/.emacs.d/settings/lua.el");; lua
 (load "~/.emacs.d/settings/textile.el") ;; textile
 (load "~/.emacs.d/settings/html.el");; HTML
+(load "~/.emacs.d/settings/dockerfile.el");; dockerfile
