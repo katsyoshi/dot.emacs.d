@@ -12,7 +12,7 @@
     exec-path-from-shell
 
     ;;;; for auto-complete
-    auto-complete fuzzy popup pos-tip yasnippet auto-yasnippet
+    auto-complete fuzzy popup pos-tip
 
     ;;;; buffer utils
     popwin elscreen yascroll buffer-move
@@ -31,6 +31,9 @@
 
     ;;;; skk
     ddskk
+
+    ;;;; snippet
+    yasnippet auto-yasnippet helm-c-yasnippet
 
     ;;;; text
     yaml-mode markdown-mode textile-mode

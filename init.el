@@ -110,3 +110,4 @@
 (load "~/.emacs.d/settings/textile.el") ;; textile
 (load "~/.emacs.d/settings/html.el");; HTML
 (load "~/.emacs.d/settings/dockerfile.el");; dockerfile
+(load "~/.emacs.d/settings/yasnippet.el");; snippet
