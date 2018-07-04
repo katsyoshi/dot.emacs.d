@@ -100,7 +100,6 @@
 (load "~/.emacs.d/settings/complete.el");;auto-complete
 (load "~/.emacs.d/settings/git.el") ;; Git
 (load "~/.emacs.d/settings/skk.el") ;; SKK
-(load "~/.emacs.d/settings/fonts23.el") ;; font settings
 (load "~/.emacs.d/settings/ruby.el") ;; Ruby
 (load "~/.emacs.d/settings/clang.el");; C Lang
 (load "~/.emacs.d/settings/yaml.el") ;; Yaml
