@@ -97,16 +97,7 @@
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
 
-(load "~/.emacs.d/settings/complete.el");;auto-complete
 (load "~/.emacs.d/settings/git.el") ;; Git
 (load "~/.emacs.d/settings/skk.el") ;; SKK
-(load "~/.emacs.d/settings/ruby.el") ;; Ruby
-(load "~/.emacs.d/settings/clang.el");; C Lang
 (load "~/.emacs.d/settings/yaml.el") ;; Yaml
 (load "~/.emacs.d/settings/markdown.el");;markdown
-(load "~/.emacs.d/settings/rails.el");;rails
-(load "~/.emacs.d/settings/lua.el");; lua
-(load "~/.emacs.d/settings/textile.el") ;; textile
-(load "~/.emacs.d/settings/html.el");; HTML
-(load "~/.emacs.d/settings/dockerfile.el");; dockerfile
-(load "~/.emacs.d/settings/yasnippet.el");; snippet
