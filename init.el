@@ -56,7 +56,7 @@
 (setq x-select-enable-clipboard t)
 
 ;; バッファリスト
-(load "~/.emacs.d/settings/helm.el")
+(load "~/.emacs.d/settings/ivy.el")
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (define-key helm-map (kbd "TAB") 'helm-execute-persistent-action)
 ;; emacs daemons
