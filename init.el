@@ -85,6 +85,6 @@
 (load "~/.emacs.d/settings/all-the-icons.el")
 (load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/git.el")
+(load "~/.emacs.d/settings/markdown.el")
 (load "~/.emacs.d/settings/skk.el")
 (load "~/.emacs.d/settings/yaml.el")
-(load "~/.emacs.d/settings/markdown.el")
