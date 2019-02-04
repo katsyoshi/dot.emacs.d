@@ -64,25 +64,6 @@
 (unless (server-running-p)
   (server-start))
 
-;; ウインドウのサイズとツールバーの表示
-(if window-system
-    (progn
-      (setq initial-frame-alist
-            (append (list
-                     '(width . 80)
-                     '(height . 80))
-                    initial-frame-alist))
-      ;; alpha
-      (set-frame-parameter (selected-frame) 'alpha '(90 90))
-      ;; tool-bar表示オフ
-      (tool-bar-mode 0)
-      ;; Cacoo
-      ;;(load "~/.emacs.d/settings/cacoo.el")
-      ;; 画像表示
-      (auto-image-file-mode t)
-      (auto-compression-mode t)))
-      ;; window分割
-      ;;(load "~/.emacs.d/settings/window.el")))
 ;; flycheck
 (require 'flycheck)
 
