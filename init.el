@@ -82,7 +82,7 @@
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
 
-(load "~/.emacs.d/settings/git.el") ;; Git
-(load "~/.emacs.d/settings/skk.el") ;; SKK
-(load "~/.emacs.d/settings/yaml.el") ;; Yaml
-(load "~/.emacs.d/settings/markdown.el");;markdown
+(load "~/.emacs.d/settings/git.el")
+(load "~/.emacs.d/settings/skk.el")
+(load "~/.emacs.d/settings/yaml.el")
+(load "~/.emacs.d/settings/markdown.el")
