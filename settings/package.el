@@ -8,41 +8,32 @@
 ;; インストールするパッケージ
 (defvar my/favorite-packages
   '(
-    ;;;; system
+    ;; default install packages
     exec-path-from-shell
-
-    ;;;; for auto-complete
-    auto-complete fuzzy popup pos-tip
-
-    ;;;; buffer utils
-    popwin elscreen yascroll buffer-move
-
-    ;;;; flycheck
-    flycheck
-
-    ;;;; helm
-    helm
-
-    ;;;; git
-    magit gitattributes-mode gh magit-gh-pulls
-
-    ;;;; rails
-    haml-mode slim-mode sass-mode coffee-mode feature-mode web-mode
-
-    ;;;; skk
+    counsel
     ddskk
+    magit
+    neotree
 
-    ;;;; snippet
-    yasnippet auto-yasnippet helm-c-yasnippet
+    ;; all-the-icons
+    all-the-icons
+    all-the-icons-ivy
 
-    ;;;; text
-    yaml-mode markdown-mode textile-mode
+    ;; lsp-mode
+    lsp-mode
+    lsp-ui
 
-    ;;;; lang
-    lua-mode rust-mode
+    ;; auto completion packages
+    company
+    company-lsp
 
-    ;; Dockerfile
+    ;; language packages
     dockerfile-mode
+    js2-mode
+    markdown-mode
+    lua-mode
+    rust-mode
+    yaml-mode
     ))
 
 ;; my/favorite-packagesからインストールしていないパッケージをインストール
