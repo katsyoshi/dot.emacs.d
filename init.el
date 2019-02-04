@@ -82,6 +82,7 @@
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
 
+(load "~/.emacs.d/settings/all-the-icons.el")
 (load "~/.emacs.d/settings/git.el")
 (load "~/.emacs.d/settings/skk.el")
 (load "~/.emacs.d/settings/yaml.el")
