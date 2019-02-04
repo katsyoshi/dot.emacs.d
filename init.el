@@ -86,6 +86,10 @@
 ;; flycheck
 (require 'flycheck)
 
+;; neotree
+(require 'neotree)
+(global-set-key (kbd "C-o") 'neotree-toggle)
+
 ;; 矩形選択
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
