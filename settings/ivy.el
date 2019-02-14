@@ -18,3 +18,7 @@
 ;; swiper設定
 (global-set-key "\C-s" 'swiper)
 (defvar swiper-include-line-number-in-search t)
+
+;; all-the-icons-ivy
+(require 'all-the-icons)
+(all-the-icons-ivy-setup)
