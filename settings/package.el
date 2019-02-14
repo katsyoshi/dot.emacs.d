@@ -25,6 +25,7 @@
 
     ;; auto completion packages
     company
+    company-box
     company-lsp
 
     ;; language packages
