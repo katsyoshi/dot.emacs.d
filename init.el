@@ -95,6 +95,7 @@
 (load "~/.emacs.d/settings/all-the-icons.el")
 (load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/doom.el")
+(load "~/.emacs.d/settings/font.el")
 (load "~/.emacs.d/settings/git.el")
 (load "~/.emacs.d/settings/lsp.el")
 (load "~/.emacs.d/settings/markdown.el")
