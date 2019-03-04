@@ -29,6 +29,7 @@
     company-lsp
 
     ;; language packages
+    ccls
     dockerfile-mode
     js2-mode
     markdown-mode
