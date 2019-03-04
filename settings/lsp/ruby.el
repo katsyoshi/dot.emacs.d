@@ -1,2 +1,1 @@
-(add-hook 'ruby-mode #'lsp)
-
+(add-hook 'ruby-mode-hook #'lsp)
