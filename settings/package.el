@@ -1,8 +1,7 @@
 (require 'package)
-(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (fset 'package-desc-vers 'package--ac-desc-version)
-;; (package-refresh-contents)
+(package-refresh-contents)
 (package-initialize)
 
 ;; インストールするパッケージ
@@ -12,12 +11,24 @@
     exec-path-from-shell
     counsel
     ddskk
+    flycheck
+    ivy-rich
+    hydra
     magit
     neotree
 
     ;; all-the-icons
     all-the-icons
     all-the-icons-ivy
+
+    ;; visual thema
+    ace-window
+    doom
+    doom-modeline
+    doom-themes
+    fill-column-indicator
+    hide-mode-line
+    minimap
 
     ;; lsp-mode
     lsp-mode
@@ -31,6 +42,7 @@
     ;; language packages
     ccls
     dockerfile-mode
+    go-mode
     js2-mode
     markdown-mode
     lua-mode
