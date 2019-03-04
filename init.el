@@ -89,3 +89,12 @@
 (load "~/.emacs.d/settings/markdown.el")
 (load "~/.emacs.d/settings/skk.el")
 (load "~/.emacs.d/settings/yaml.el")
+
+;; LSP
+(load "~/.emacs.d/settings/lsp/clang.el")
+(load "~/.emacs.d/settings/lsp/dockerfile.el")
+(load "~/.emacs.d/settings/lsp/go.el")
+(load "~/.emacs.d/settings/lsp/javascript.el")
+(load "~/.emacs.d/settings/lsp/python.el")
+(load "~/.emacs.d/settings/lsp/ruby.el")
+(load "~/.emacs.d/settings/lsp/rust.el")
