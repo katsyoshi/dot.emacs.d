@@ -1,7 +1,8 @@
 ;; .emacs.d/init.el
 ;; set font and background color
-(set-background-color "#98bc98")
-(set-foreground-color "black")
+(set-background-color "#282a36")
+(set-foreground-color "#f8f8f2")
+(set-cursor-color "#ccccc7")
 ;; バックスペース
 (global-set-key (kbd "C-h") 'delete-backward-char)
 ;; ヘルプ
@@ -95,6 +96,7 @@
 (load "~/.emacs.d/settings/all-the-icons.el")
 (load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/doom.el")
+(load "~/.emacs.d/settings/font.el")
 (load "~/.emacs.d/settings/git.el")
 (load "~/.emacs.d/settings/lsp.el")
 (load "~/.emacs.d/settings/markdown.el")
