@@ -58,7 +58,7 @@
 ;; クリップコード
 (setq x-select-enable-clipboard t)
 
-;; バッファリスト
+;; ivy設定
 (load "~/.emacs.d/settings/ivy.el")
 
 ;; emacs daemons
