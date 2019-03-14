@@ -82,10 +82,8 @@
 (setq neo-theme (if (display-graphic-p) 'nerd))
 (global-set-key (kbd "C-o") 'neotree-toggle)
 
-;; 矩形選択
-(cua-mode t)
-(setq cua-enable-cua-keys nil)
-(global-set-key (kbd "C-c C-]") 'cua-set-rectangle-mark)
+;; rectangle mark
+(global-set-key (kbd "C-<return>") 'rectangle-mark-mode)
 
 ;; ;; backup
 (setq make-backup-files t)
