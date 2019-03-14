@@ -16,7 +16,7 @@
 (defvar counsel-find-file-ignore-regexp (regexp-opt '("./" "../")))
 
 ;; swiper設定
-(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-s") 'swiper)
 (defvar swiper-include-line-number-in-search t)
 
 ;; all-the-icons-ivy
