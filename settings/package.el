@@ -1,8 +1,8 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (fset 'package-desc-vers 'package--ac-desc-version)
-(package-refresh-contents)
 (package-initialize)
+(package-refresh-contents)
 
 ;; インストールするパッケージ
 (defvar my/favorite-packages
