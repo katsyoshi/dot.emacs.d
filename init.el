@@ -99,6 +99,7 @@
 (load "~/.emacs.d/settings/git.el")
 (load "~/.emacs.d/settings/lsp.el")
 (load "~/.emacs.d/settings/markdown.el")
+(load "~/.emacs.d/settings/sass.el")
 (load "~/.emacs.d/settings/skk.el")
 (load "~/.emacs.d/settings/yaml.el")
 
