@@ -39,6 +39,9 @@
     company-box
     company-lsp
 
+    ;; snippet
+    yasnippet
+
     ;; language packages
     ccls
     dockerfile-mode

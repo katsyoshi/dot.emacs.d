@@ -102,6 +102,7 @@
 (load "~/.emacs.d/settings/sass.el")
 (load "~/.emacs.d/settings/skk.el")
 (load "~/.emacs.d/settings/yaml.el")
+(load "~/.emacs.d/settings/yasnippet.el")
 
 ;; LSP
 (load "~/.emacs.d/settings/lsp/clang.el")
