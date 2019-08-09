@@ -14,7 +14,7 @@
 ;; flycheck ruby rubocop
 (add-hook 'enh-ruby-mode-hook
           '(lambda ()
-             (setq flycheck-checker 'ruby-rubocop)
+             (setq flycheck-checker 'ruby-lint)
              (flycheck-mode 1)))
 
 (defadvice ruby-indent-line (after unindent-closing-paren activate)
