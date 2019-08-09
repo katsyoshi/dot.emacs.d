@@ -42,6 +42,15 @@
     ;; snippet
     yasnippet
 
+    ;; terraform
+    terraform-mode
+
+    ;; ruby
+    enh-ruby-mode
+    inf-ruby
+    ;; company for ruby
+    company-inf-ruby
+
     ;; language packages
     ccls
     dockerfile-mode
