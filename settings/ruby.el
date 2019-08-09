@@ -32,3 +32,5 @@
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
 (setq ruby-insert-encoding-magic-comment nil)
+
+(add-hook 'enh-ruby-mode-hook 'inf-ruby-minor-mode)
