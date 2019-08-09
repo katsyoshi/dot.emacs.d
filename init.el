@@ -100,6 +100,7 @@
 (load "~/.emacs.d/settings/lsp.el")
 (load "~/.emacs.d/settings/markdown.el")
 (load "~/.emacs.d/settings/sass.el")
+(load "~/.emacs.d/settings/sh.el")
 (load "~/.emacs.d/settings/skk.el")
 (load "~/.emacs.d/settings/yaml.el")
 (load "~/.emacs.d/settings/yasnippet.el")
