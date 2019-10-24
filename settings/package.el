@@ -16,6 +16,7 @@
     hydra
     magit
     neotree
+    undo-tree
 
     ;; all-the-icons
     all-the-icons

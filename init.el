@@ -84,6 +84,10 @@
 (setq neo-theme (if (display-graphic-p) 'nerd))
 (global-set-key (kbd "C-o") 'neotree-toggle)
 
+;; undo-tree
+(require 'undo-tree)
+(global-undo-tree-mode)
+
 ;; rectangle mark
 (global-set-key (kbd "C-<return>") 'rectangle-mark-mode)
 
