@@ -114,6 +114,8 @@
 (load "~/.emacs.d/settings/lsp/python.el")
 (load "~/.emacs.d/settings/lsp/ruby.el")
 (load "~/.emacs.d/settings/lsp/rust.el")
+(load "~/.emacs.d/settings/lsp/yaml.el")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
