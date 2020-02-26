@@ -2,15 +2,14 @@
 (require 'ivy)
 (ivy-mode 1)
 (global-set-key "\C-s" 'swiper)
-(setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
-(setq ivy-height 30)
-(setq ivy-extra-directories nil)
-(setq ivy-re-builders-alist
-      '((t . ivy--regex-plus)))
+(setq ivy-use-virtual-buffers t
+      ivy-height 30
+      ivy-extra-directories nil
+      ivy-re-builders-alist '((t . ivy--regex-fuzzy))
+      ivy-initial-inputs-alist nil)
 
 ;; counsel設定
-(setq ivy-initial-inputs-alist nil)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-c C-f") 'counsel-rg)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
