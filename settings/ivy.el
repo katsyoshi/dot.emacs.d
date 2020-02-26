@@ -12,6 +12,8 @@
 ;; counsel設定
 (global-set-key (kbd "C-c C-f") 'counsel-rg)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "M-y") 'counsel-yank-pop)
+(global-set-key (kbd "C-c C-c") 'counsel-flycheck)
 (defvar counsel-find-file-ignore-regexp (regexp-opt '("./" "../")))
 
 ;; swiper設定
