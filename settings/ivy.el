@@ -10,7 +10,6 @@
       ivy-initial-inputs-alist nil)
 
 ;; counsel設定
-(global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-c C-f") 'counsel-rg)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (defvar counsel-find-file-ignore-regexp (regexp-opt '("./" "../")))
