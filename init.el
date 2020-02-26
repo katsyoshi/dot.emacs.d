@@ -69,12 +69,11 @@
   (server-start))
 
 ;; ウインドウのサイズとツールバーの表示
-(if window-system
-    (progn
-      (tool-bar-mode 0)
-      ;; 画像表示
-      (auto-image-file-mode t)
-      (auto-compression-mode t)))
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+;; 画像表示
+(auto-image-file-mode t)
+(auto-compression-mode t)
 
 ;; flycheck
 (require 'flycheck)
