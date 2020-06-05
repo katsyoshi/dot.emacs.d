@@ -6,7 +6,7 @@
 (setq ivy-use-virtual-buffers t
       ivy-height 30
       ivy-extra-directories nil
-      ivy-re-builders-alist '((t . ivy--regex-fuzzy))
+      ivy-re-builders-alist '((t . ivy--regex-plus))
       ivy-initial-inputs-alist nil)
 
 ;; counsel設定
