@@ -62,6 +62,8 @@
 
 ;; ivy設定
 (load "~/.emacs.d/settings/ivy.el")
+;; migemo 設定
+(load "~/.emacs.d/settings/migemo.el")
 
 ;; emacs daemons
 (require 'server)

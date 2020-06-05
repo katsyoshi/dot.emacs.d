@@ -1,0 +1,26 @@
+(require 'dash)
+(require 's)
+(require 'migemo)
+;; migemo
+(setq migemo-command "cmigemo")
+(setq migemo-dictionary "/usr/share/migemo/migemo-dict")
+(setq migemo-options '("--quiet" "--nonewline" "--emacs"))
+
+(setq migemo-user-dictionary nil)
+(setq migemo-regex-dictionary nil)
+(setq migemo-coding-system 'utf-8-unix)
+(migemo-init)
+
+(defun ytn-ivy-migemo-re-builder (str)
+  (let* ((sep " \\|\\^\\|\\.\\|\\*")
+         (splitted (--map (s-join "" it)
+                          (--partition-by (s-matches-p " \\|\\^\\|\\.\\|\\*" it)
+                                          (s-split "" str t)))))
+    (s-join "" (--map (cond ((s-equals? it " ") ".*?")
+                            ((s-matches? sep it) it)
+                            (t (migemo-get-pattern it)))
+                      splitted))))
+
+(setq ivy-re-builders-alist '((t . ivy--regex-plus)
+                              (counsel-rg . ytn-ivy-migemo-re-builder)
+                              (swiper . ytn-ivy-migemo-re-builder)))

@@ -15,6 +15,7 @@
     ivy-rich
     hydra
     magit
+    migemo
     neotree
     undo-tree
 
