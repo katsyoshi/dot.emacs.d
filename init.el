@@ -75,10 +75,6 @@
 ;; flycheck
 (require 'flycheck)
 
-;; neotree
-(require 'neotree)
-(setq neo-theme (if (display-graphic-p) 'nerd))
-(global-set-key (kbd "C-o") 'neotree-toggle)
 ;; rectangle mark
 (global-set-key (kbd "C-<return>") 'rectangle-mark-mode)
 
@@ -95,6 +91,7 @@
 (load "~/.emacs.d/settings/lsp.el")
 (load "~/.emacs.d/settings/markdown.el")
 (load "~/.emacs.d/settings/multi-cursors.el")
+(load "~/.emacs.d/settings/neotree.el")
 (load "~/.emacs.d/settings/ruby.el")
 (load "~/.emacs.d/settings/sass.el")
 (load "~/.emacs.d/settings/sh.el")
