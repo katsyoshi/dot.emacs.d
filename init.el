@@ -79,11 +79,6 @@
 (require 'neotree)
 (setq neo-theme (if (display-graphic-p) 'nerd))
 (global-set-key (kbd "C-o") 'neotree-toggle)
-
-;; undo-tree
-(require 'undo-tree)
-(global-undo-tree-mode)
-
 ;; rectangle mark
 (global-set-key (kbd "C-<return>") 'rectangle-mark-mode)
 
@@ -104,6 +99,7 @@
 (load "~/.emacs.d/settings/sass.el")
 (load "~/.emacs.d/settings/sh.el")
 (load "~/.emacs.d/settings/skk.el")
+(load "~/.emacs.d/settings/undo-tree.el")
 (load "~/.emacs.d/settings/yaml.el")
 (load "~/.emacs.d/settings/yasnippet.el")
 
