@@ -16,6 +16,7 @@
     hydra
     magit
     migemo
+    multiple-cursors
     neotree
     undo-tree
 

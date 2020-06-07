@@ -65,11 +65,6 @@
 ;; migemo 設定
 (load "~/.emacs.d/settings/migemo.el")
 
-;; emacs daemons
-(require 'server)
-(unless (server-running-p)
-  (server-start))
-
 ;; ウインドウのサイズとツールバーの表示
 (tool-bar-mode 0)
 (menu-bar-mode 0)
@@ -104,6 +99,7 @@
 (load "~/.emacs.d/settings/git.el")
 (load "~/.emacs.d/settings/lsp.el")
 (load "~/.emacs.d/settings/markdown.el")
+(load "~/.emacs.d/settings/multi-cursors.el")
 (load "~/.emacs.d/settings/ruby.el")
 (load "~/.emacs.d/settings/sass.el")
 (load "~/.emacs.d/settings/sh.el")
