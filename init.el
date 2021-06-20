@@ -60,8 +60,8 @@
 ;; クリップコード
 (setq x-select-enable-clipboard t)
 
-;; ivy設定
-(load "~/.emacs.d/settings/ivy.el")
+;; consult設定
+(load "~/.emacs.d/settings/vertico.el")
 ;; migemo 設定
 (load "~/.emacs.d/settings/migemo.el")
 
