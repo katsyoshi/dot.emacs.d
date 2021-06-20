@@ -9,20 +9,24 @@
   '(
     ;; default install packages
     exec-path-from-shell
-    counsel
+    consult
     ddskk
     flycheck
-    ivy-rich
     hydra
     magit
     migemo
     multiple-cursors
     neotree
     undo-tree
+    vertico
 
     ;; all-the-icons
     all-the-icons
     all-the-icons-ivy
+
+    ;; consult
+    consult-lsp
+    consult-flycheck
 
     ;; visual thema
     ace-window
