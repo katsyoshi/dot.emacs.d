@@ -60,8 +60,8 @@
 ;; クリップコード
 (setq x-select-enable-clipboard t)
 
-;; ivy設定
-(load "~/.emacs.d/settings/ivy.el")
+;; consult設定
+(load "~/.emacs.d/settings/vertico.el")
 ;; migemo 設定
 (load "~/.emacs.d/settings/migemo.el")
 
@@ -88,6 +88,7 @@
 (load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/doom.el")
 (load "~/.emacs.d/settings/git.el")
+(load "~/.emacs.d/settings/java.el")
 (load "~/.emacs.d/settings/lsp.el")
 (load "~/.emacs.d/settings/markdown.el")
 (load "~/.emacs.d/settings/multi-cursors.el")
@@ -104,6 +105,7 @@
 (load "~/.emacs.d/settings/lsp/clang.el")
 (load "~/.emacs.d/settings/lsp/dockerfile.el")
 (load "~/.emacs.d/settings/lsp/go.el")
+(load "~/.emacs.d/settings/lsp/java.el")
 (load "~/.emacs.d/settings/lsp/javascript.el")
 (load "~/.emacs.d/settings/lsp/python.el")
 (load "~/.emacs.d/settings/lsp/ruby.el")

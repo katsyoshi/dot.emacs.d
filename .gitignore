@@ -1,3 +1,4 @@
+/**/#*#
 /**/*.elc
 /**/*.png
 /**/*.dat
@@ -5,9 +6,16 @@
 /**/*.gif
 /**/*.doc
 /.bzrignore
+/.cache
+/.dap-breakpoints
+/.lsp-session-v1
 /abbrev_defs
+/recentf
+/recentf~
+/transient/
 /tutorial/
 /tramp
+/workspace
 /cacoo
 /ac-comphist.dat
 /anything-c-adaptive-history
