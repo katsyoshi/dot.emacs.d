@@ -13,7 +13,7 @@
 
 ;; flycheck ruby rubocop
 (add-hook 'enh-ruby-mode-hook
-          '(lambda ()
+          #'(lambda ()
              (setq flycheck-checker 'ruby-lint)
              (flycheck-mode 1)))
 
