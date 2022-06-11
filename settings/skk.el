@@ -1,20 +1,38 @@
 ;; SKK辞書
-(let ((default-directory (expand-file-name "~/.emacs.d/share/skk/")))
- (add-to-list 'load-path default-directory)
- (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-     (normal-top-level-add-subdirs-to-load-path)))
+;; (let ((default-directory (expand-file-name "~/.emacs.d/share/skk/")))
+;;  (add-to-list 'load-path default-directory)
+;;  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+;;      (normal-top-level-add-subdirs-to-load-path)))
 ;; SKK
-(global-set-key (kbd "C-c C-j") 'skk-mode)
+(ddskk-posframe-mode 1)
+(require 'skk)
+(global-set-key (kbd "C-\\") 'skk-mode)
 (global-set-key (kbd "C-x j") 'skk-auto-fill-mode)
 (global-set-key (kbd "C-m") 'newline-and-indent)
-(setq default-input-method "japanese-skk")
-;; 送り仮名が厳密に正しい候補を優先して表示
-(setq skk-henkan-strict-okuri-precedence t)
-;; 漢字登録時、送り仮名が厳密に正しいかをチェック
-(setq skk-check-okurigana-on-touroku t)
-;; 漢字変換のとき、Enterキーを入力すると変換決定
-(setq skk-egg-like-newline t)
-;; 句読点変更
-(setq-default skk-kutouten-type 'jp)
-;; Aspell
-(setq-default ispell-program-name "aspell")
+
+(add-hook 'skk-load-hook
+          (lambda ()
+            ;; コード中では自動的に英字にする。
+            ;; (require 'context-skk)
+            (setq skk-jisyo-code 'utf-8)
+            (setq skk-large-jisyo "~/.emacs.d/share/skk/SKK-JISYO.L")
+            ;;(setq skk-comp-mode t) ;; 動的自動補完
+            ;;(setq skk-auto-insert-paren t)
+            ;; (setq skk-delete-implies-kakutei nil)
+            ;; (setq skk-henkan-strict-okuri-precedence t)
+            (setq default-input-method "japanese-skk")
+            (setq skk-egg-like-newline t)
+            (setq-default skk-kutouten-type 'jp)
+            (setq-default ispell-program-name "aspell")
+
+            (setq skk-show-annotation t) ;; 単語の意味をアノテーションとして表示。例) いぜん /以前;previous/依然;still/
+
+            ;; ;; 半角で入力したい文字
+            ;; (setq skk-rom-kana-rule-list
+            ;;       (nconc skk-rom-kana-rule-list
+            ;;              '((";" nil nil)
+            ;;                (":" nil nil)
+            ;;                ("?" nil nil)
+            ;;                ("!" nil nil))))
+            ))
+
