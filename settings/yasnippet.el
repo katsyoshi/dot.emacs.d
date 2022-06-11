@@ -1,6 +1,6 @@
 (require 'yasnippet)
-(global-set-key (kbd "C-c y") 'yas/insert-snippet)
+(global-set-key (kbd "C-c y") 'yas-insert-snippet)
 
 (setq yas/snippet-dirs
-      '("~/.emacs.d/share/snippets" "~/.emacs.d/site-lisp/yasnippet/extras/imported"))
+      '("~/.emacs.d/share/snippets"))
 (yas/global-mode 1)
