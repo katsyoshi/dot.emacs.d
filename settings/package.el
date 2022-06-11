@@ -11,6 +11,7 @@
     exec-path-from-shell
     consult
     ddskk
+    ddskk-posframe
     flycheck
     hydra
     magit

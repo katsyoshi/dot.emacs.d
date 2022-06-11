@@ -23,11 +23,10 @@
 
 ;; set switch buffer keybind
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
+
 ;; Load PATH
-;; (let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
-;;  (add-to-list 'load-path default-directory)
-;;  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-;;      (normal-top-level-add-subdirs-to-load-path)))
+(load "~/.emacs.d/settings/load-path.el")
+
 ;; パス設定
 (exec-path-from-shell-initialize)
 
@@ -111,6 +110,7 @@
 (load "~/.emacs.d/settings/lsp/ruby.el")
 (load "~/.emacs.d/settings/lsp/rust.el")
 (load "~/.emacs.d/settings/lsp/yaml.el")
+(load "~/.emacs.d/settings/tsx.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
