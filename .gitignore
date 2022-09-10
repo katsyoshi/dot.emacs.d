@@ -26,3 +26,8 @@
 /elpa
 /**/*.org*
 /viper*
+/share/snippets/*
+/**/*~undo-tree~
+/eclipse.jdt.ls
+/network-security.data
+/eln-cache/

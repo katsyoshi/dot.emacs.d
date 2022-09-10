@@ -65,6 +65,7 @@
     js2-mode
     markdown-mode
     lua-mode
+    plantuml-mode
     rust-mode
     yaml-mode
     ))

@@ -1,2 +1,5 @@
 (autoload 'lua-mode "lua-mode" "mode for editing lua source files")
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(setq lua-indent-level 2)
+(setq lua-indent-nested-block-content-align nil)
+(setq lua-indent-close-paren-align t)
