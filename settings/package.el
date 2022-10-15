@@ -9,9 +9,12 @@
   '(
     ;; default install packages
     exec-path-from-shell
+    company
+    company-box
     consult
     ddskk
     ddskk-posframe
+    eglot
     flycheck
     hydra
     magit
@@ -26,7 +29,6 @@
     all-the-icons-ivy
 
     ;; consult
-    consult-lsp
     consult-flycheck
 
     ;; visual thema
@@ -38,15 +40,6 @@
     hide-mode-line
     minimap
 
-    ;; lsp-mode
-    lsp-mode
-    lsp-ui
-
-    ;; auto completion packages
-    company
-    company-box
-    company-lsp
-
     ;; snippet
     yasnippet
 
@@ -54,10 +47,7 @@
     terraform-mode
 
     ;; ruby
-    enh-ruby-mode
     inf-ruby
-    ;; company for ruby
-    company-inf-ruby
 
     ;; language packages
     ccls
