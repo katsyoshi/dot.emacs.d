@@ -86,9 +86,9 @@
 (load "~/.emacs.d/settings/all-the-icons.el")
 (load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/doom.el")
+(load "~/.emacs.d/settings/eglot.el")
 (load "~/.emacs.d/settings/git.el")
 (load "~/.emacs.d/settings/java.el")
-(load "~/.emacs.d/settings/lsp.el")
 (load "~/.emacs.d/settings/markdown.el")
 (load "~/.emacs.d/settings/multi-cursors.el")
 (load "~/.emacs.d/settings/neotree.el")
@@ -96,21 +96,15 @@
 (load "~/.emacs.d/settings/sass.el")
 (load "~/.emacs.d/settings/sh.el")
 (load "~/.emacs.d/settings/skk.el")
+(load "~/.emacs.d/settings/tsx.el")
 (load "~/.emacs.d/settings/undo-tree.el")
 (load "~/.emacs.d/settings/yaml.el")
 (load "~/.emacs.d/settings/yasnippet.el")
 
 ;; LSP
-(load "~/.emacs.d/settings/lsp/clang.el")
-(load "~/.emacs.d/settings/lsp/dockerfile.el")
-(load "~/.emacs.d/settings/lsp/go.el")
-(load "~/.emacs.d/settings/lsp/java.el")
-(load "~/.emacs.d/settings/lsp/javascript.el")
-(load "~/.emacs.d/settings/lsp/python.el")
-(load "~/.emacs.d/settings/lsp/ruby.el")
-(load "~/.emacs.d/settings/lsp/rust.el")
-(load "~/.emacs.d/settings/lsp/yaml.el")
-(load "~/.emacs.d/settings/tsx.el")
+(load "~/.emacs.d/settings/eglot/ruby.el")
+(load "~/.emacs.d/settings/eglot/rust.el")
+(load "~/.emacs.d/settings/eglot/yaml.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
