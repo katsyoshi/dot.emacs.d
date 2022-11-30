@@ -1,17 +1,17 @@
-(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.cgi$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspsec$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rake" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.schema" . ruby-mode))
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.cgi$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspsec$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rake" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.schema" . enh-ruby-mode))
 (autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 (autoload 'inf-ruby-keys
   "inf-ruby" "Set local key defs for inf-ruby in enh-ruby-mode")
 
 ;; flycheck ruby rubocop
-(add-hook 'ruby-mode-hook
+(add-hook 'enh-ruby-mode-hook
           #'(lambda ()
              (setq flycheck-checker 'ruby-lint)
              (flycheck-mode 1)))
@@ -32,4 +32,4 @@
       (when (> offset 0) (forward-char offset)))))
 (setq ruby-insert-encoding-magic-comment nil)
 
-(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+(add-hook 'enh-ruby-mode-hook 'inf-ruby-minor-mode)

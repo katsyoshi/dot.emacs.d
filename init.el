@@ -102,9 +102,7 @@
 (load "~/.emacs.d/settings/yasnippet.el")
 
 ;; LSP
-(load "~/.emacs.d/settings/lsp/ruby.el")
-(load "~/.emacs.d/settings/lsp/rust.el")
-(load "~/.emacs.d/settings/lsp/yaml.el")
+(load "~/.emacs.d/settings/lsp.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

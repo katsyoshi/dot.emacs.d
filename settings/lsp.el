@@ -11,3 +11,8 @@
 (push 'company-lsp company-backends)
 
 (setq lsp-completion-provider :capf)
+
+;; load lsp configuration
+(load "~/.emacs.d/settings/lsp/ruby.el")
+(load "~/.emacs.d/settings/lsp/rust.el")
+(load "~/.emacs.d/settings/lsp/yaml.el")
