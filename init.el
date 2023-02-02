@@ -87,7 +87,6 @@
 (load "~/.emacs.d/settings/all-the-icons.el")
 (load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/doom.el")
-(load "~/.emacs.d/settings/eglot.el")
 (load "~/.emacs.d/settings/git.el")
 (load "~/.emacs.d/settings/java.el")
 (load "~/.emacs.d/settings/markdown.el")
@@ -104,6 +103,7 @@
 
 ;; LSP
 (load "~/.emacs.d/settings/lsp.el")
+;;(load "~/.emacs.d/settings/eglot.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
