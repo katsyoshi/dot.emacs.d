@@ -14,15 +14,17 @@
     consult
     ddskk
     ddskk-posframe
-    eglot
     flycheck
     hydra
+    lsp-mode
+    lsp-ui
     magit
     migemo
     multiple-cursors
     neotree
     undo-tree
     vertico
+    web-mode
 
     ;; all-the-icons
     all-the-icons
@@ -47,11 +49,13 @@
     terraform-mode
 
     ;; ruby
+    enh-ruby-mode
     inf-ruby
 
     ;; language packages
     ccls
     dockerfile-mode
+    enh-ruby-mode
     go-mode
     js2-mode
     markdown-mode

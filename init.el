@@ -73,6 +73,7 @@
 
 ;; flycheck
 (require 'flycheck)
+(pixel-scroll-mode 1)
 
 ;; rectangle mark
 (global-set-key (kbd "C-<return>") 'rectangle-mark-mode)
@@ -96,10 +97,10 @@
 (load "~/.emacs.d/settings/sass.el")
 (load "~/.emacs.d/settings/sh.el")
 (load "~/.emacs.d/settings/skk.el")
-(load "~/.emacs.d/settings/tsx.el")
 (load "~/.emacs.d/settings/undo-tree.el")
 (load "~/.emacs.d/settings/yaml.el")
 (load "~/.emacs.d/settings/yasnippet.el")
+(load "~/.emacs.d/settings/web.el")
 
 ;; LSP
 (load "~/.emacs.d/settings/lsp.el")
