@@ -6,9 +6,12 @@
 (add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.schema" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rbs" . rbs-mode))
 (autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 (autoload 'inf-ruby-keys
   "inf-ruby" "Set local key defs for inf-ruby in enh-ruby-mode")
+
+(setq enh-ruby-deep-indent-paren :true)
 
 ;; flycheck ruby rubocop
 (add-hook 'enh-ruby-mode-hook
