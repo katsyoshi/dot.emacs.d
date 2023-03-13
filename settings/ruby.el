@@ -4,6 +4,7 @@
 (add-to-list 'auto-mode-alist '("\\.gemspsec$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Steepfile" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.schema" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rbs" . rbs-mode))
@@ -11,7 +12,8 @@
 (autoload 'inf-ruby-keys
   "inf-ruby" "Set local key defs for inf-ruby in enh-ruby-mode")
 
-(setq enh-ruby-deep-indent-paren :true)
+(setq enh-ruby-deep-indent-paren nil)
+(setq enh-ruby-deep-indent-construct nil)
 
 ;; flycheck ruby rubocop
 (add-hook 'enh-ruby-mode-hook
