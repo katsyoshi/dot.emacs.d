@@ -1,22 +1,25 @@
-(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.cgi$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspsec$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Steepfile" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rake" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.schema" . enh-ruby-mode))
+(tree-sitter-require 'ruby)
+(add-to-list 'tree-sitter-major-mode-language-alist '(ruby-ts-mode . ruby))
+(add-to-list 'interpreter-mode-alist '("ruby" . ruby-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.cgi$" . ruby-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspsec$" . ruby-ts-mode))
+(add-to-list 'auto-mode-alist '("Rakefile" . ruby-ts-mode))
+(add-to-list 'auto-mode-alist '("Gemfile" . ruby-ts-mode))
+(add-to-list 'auto-mode-alist '("Steepfile" . ruby-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.rake" . ruby-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.schema" . ruby-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.rbs" . rbs-mode))
+(add-to-list 'auto-mode-alist '("\\.irbrc" . rbs-mode))
 (autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 (autoload 'inf-ruby-keys
-  "inf-ruby" "Set local key defs for inf-ruby in enh-ruby-mode")
+  "inf-ruby" "Set local key defs for inf-ruby in ruby-ts-mode")
 
-(setq enh-ruby-deep-indent-paren nil)
-(setq enh-ruby-deep-indent-construct nil)
+(setq ruby-deep-indent-paren nil)
+(setq ruby-deep-indent-construct nil)
 
 ;; flycheck ruby rubocop
-(add-hook 'enh-ruby-mode-hook
+(add-hook 'ruby-ts-mode-hook
           #'(lambda ()
              (setq flycheck-checker 'ruby-lint)
              (flycheck-mode 1)))
@@ -37,4 +40,4 @@
       (when (> offset 0) (forward-char offset)))))
 (setq ruby-insert-encoding-magic-comment nil)
 
-(add-hook 'enh-ruby-mode-hook 'inf-ruby-minor-mode)
+(add-hook 'ruby-ts-mode-hook 'inf-ruby-minor-mode)

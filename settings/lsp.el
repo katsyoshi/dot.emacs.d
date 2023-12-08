@@ -4,7 +4,7 @@
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 ;; company
-(require 'company-mode)
+(require 'company)
 (company-mode 1)
 
 ;; company box

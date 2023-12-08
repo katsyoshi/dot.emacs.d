@@ -1,5 +1,5 @@
 (require 'company)
-(global-company-mode)
+(global-company-mode t)
 (setq company-transformers '(company-sort-by-backend-importance))
 (setq company-idle-delay 0)
 (setq company-minimum-prefix-length 3)

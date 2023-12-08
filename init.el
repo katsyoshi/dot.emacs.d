@@ -56,10 +56,11 @@
 ;; カーソルの色
 (set-cursor-color "light blue")
 ;; clipboard
+(setq select-enable-clipboard t)
 ;; クリップコード
-(setq x-select-enable-clipboard t)
 
 ;; consult設定
+(load "~/.emacs.d/settings/ivy.el")
 (load "~/.emacs.d/settings/vertico.el")
 ;; migemo 設定
 (load "~/.emacs.d/settings/migemo.el")
@@ -71,6 +72,8 @@
 (auto-image-file-mode t)
 (auto-compression-mode t)
 
+;; server settings
+(load "~/.emacs.d/settings/server.el")
 ;; flycheck
 (require 'flycheck)
 (pixel-scroll-mode 1)
@@ -84,7 +87,6 @@
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
 
-(load "~/.emacs.d/settings/all-the-icons.el")
 (load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/doom.el")
 (load "~/.emacs.d/settings/git.el")
@@ -102,8 +104,9 @@
 (load "~/.emacs.d/settings/web.el")
 
 ;; LSP
-(load "~/.emacs.d/settings/lsp.el")
-;;(load "~/.emacs.d/settings/eglot.el")
+;; (load "~/.emacs.d/settings/lsp.el")
+(load "~/.emacs.d/settings/eglot.el")
+(load "~/.emacs.d/settings/copilot.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -111,11 +114,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (go-mode yaml-mode rust-mode neotree minimap magit lua-mode lsp-ui js2-mode ivy-rich hydra hide-mode-line flycheck fill-column-indicator exec-path-from-shell doom-themes doom-modeline doom dockerfile-mode ddskk counsel company-lsp company-box ccls all-the-icons-ivy ace-window))))
+   '(region-bindings-mode lsp-mode web-mode graphviz-dot-mode eglot tree-sitter-langs tree-sitter lsp-origami origami rjsx-mode graphql-mode typescript-mode go-mode yaml-mode rust-mode neotree minimap magit lua-mode lsp-ui js2-mode ivy-rich hydra hide-mode-line flycheck fill-column-indicator exec-path-from-shell doom-themes doom-modeline doom dockerfile-mode ddskk counsel company-lsp company-box ccls all-the-icons-ivy ace-window)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(doom-modeline-bar ((t (:background "#6272a4")))))
+(put 'set-goal-column 'disabled nil)

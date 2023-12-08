@@ -22,4 +22,6 @@
 
 ;; all-the-icons-ivy
 (require 'all-the-icons)
-(all-the-icons-ivy-setup)
+(setq all-the-icons-color-icons t)
+(all-the-icons-ivy-rich-mode 1)
+(ivy-rich-mode 1)

@@ -19,10 +19,9 @@
             (<  (display-pixel-height) (nth 1 fhd)))
        (setq font-height 4k-font-height)))
 
+;; フォント設定
 (set-face-attribute 'default nil :family "Noto Sans Mono CJK JP" :height font-height)
 
 (global-set-key (kbd "s-C-u") 'text-scale-increase)
 (global-set-key (kbd "s-C-l") 'text-scale-decreae)
 (global-set-key (kbd "s-C-0") 'text-scale-adjust)
-(print (display-pixel-height))
-(print (display-pixel-width))
