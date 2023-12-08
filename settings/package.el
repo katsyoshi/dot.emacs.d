@@ -12,6 +12,7 @@
     company
     company-box
     consult
+    counsel
     ddskk
     ddskk-posframe
     flycheck

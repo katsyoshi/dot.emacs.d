@@ -57,7 +57,6 @@
 (set-cursor-color "light blue")
 ;; clipboard
 (setq select-enable-clipboard t)
-;; クリップコード
 
 ;; consult設定
 (load "~/.emacs.d/settings/ivy.el")
@@ -87,6 +86,7 @@
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
 
+(load "~/.emacs.d/settings/treesitter.el")
 (load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/doom.el")
 (load "~/.emacs.d/settings/git.el")
@@ -106,7 +106,7 @@
 ;; LSP
 ;; (load "~/.emacs.d/settings/lsp.el")
 (load "~/.emacs.d/settings/eglot.el")
-(load "~/.emacs.d/settings/copilot.el")
+;; (load "~/.emacs.d/settings/copilot.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
