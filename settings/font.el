@@ -14,7 +14,7 @@
        (setq font-height 4k-font-height))
       ((and (>= (display-pixel-width) (nth 0 fhd))
             (>= (display-pixel-height) (nth 1 fhd)))
-       (setq font-height 120))
+       (setq font-height 4k-font-height))
       ((and (<  (display-pixel-width) (nth 0 fhd))
             (<  (display-pixel-height) (nth 1 fhd)))
        (setq font-height 4k-font-height)))
