@@ -29,6 +29,7 @@
     ;; all-the-icons
     all-the-icons
     all-the-icons-ivy
+    all-the-icons-ivy-rich
 
     ;; consult
     consult-flycheck
