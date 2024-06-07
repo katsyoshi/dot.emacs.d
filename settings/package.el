@@ -21,6 +21,7 @@
     migemo
     multiple-cursors
     neotree
+    orderless
     undo-tree
     vertico
     web-mode
