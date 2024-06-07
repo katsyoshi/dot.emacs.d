@@ -96,15 +96,12 @@
 (load "~/.emacs.d/settings/java.el")
 (load "~/.emacs.d/settings/markdown.el")
 (load "~/.emacs.d/settings/multi-cursors.el")
-(load "~/.emacs.d/settings/neotree.el")
 (load "~/.emacs.d/settings/ruby.el")
-(load "~/.emacs.d/settings/sass.el")
 (load "~/.emacs.d/settings/sh.el")
 (load "~/.emacs.d/settings/skk.el")
 (load "~/.emacs.d/settings/undo-tree.el")
 (load "~/.emacs.d/settings/yaml.el")
 (load "~/.emacs.d/settings/yasnippet.el")
-(load "~/.emacs.d/settings/web.el")
 
 ;; LSP
 ;; (load "~/.emacs.d/settings/lsp.el")
