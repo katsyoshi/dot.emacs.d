@@ -17,8 +17,6 @@
     ddskk-posframe
     flycheck
     hydra
-    lsp-mode
-    lsp-ui
     magit
     migemo
     multiple-cursors
@@ -52,20 +50,9 @@
     ;; themes
     material-theme
 
-    ;; ruby
-    enh-ruby-mode
-    inf-ruby
-
     ;; language packages
-    ccls
     dockerfile-mode
-    enh-ruby-mode
-    go-mode
     js2-mode
-    markdown-mode
-    lua-mode
-    plantuml-mode
-    rust-mode
     yaml-mode
     ))
 
