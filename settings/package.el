@@ -49,6 +49,9 @@
     ;; terraform
     terraform-mode
 
+    ;; themes
+    material-theme
+
     ;; ruby
     enh-ruby-mode
     inf-ruby

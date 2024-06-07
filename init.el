@@ -85,10 +85,13 @@
 (setq backup-directory-alist
       (cons (cons "\\.*$" (expand-file-name "~/.bak"))
             backup-directory-alist))
+;; load doom
+(load "~/.emacs.d/settings/doom.el")
+;; load theme
+(load-theme 'material t)
 
 (load "~/.emacs.d/settings/treesitter.el")
 (load "~/.emacs.d/settings/company.el")
-(load "~/.emacs.d/settings/doom.el")
 (load "~/.emacs.d/settings/git.el")
 (load "~/.emacs.d/settings/java.el")
 (load "~/.emacs.d/settings/markdown.el")
