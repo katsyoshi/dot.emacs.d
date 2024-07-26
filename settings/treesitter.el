@@ -27,4 +27,9 @@
   (unless (treesit-language-available-p lang)
     (treesit-install-language-grammar lang))
   (unless (eq lang 'rbs)
-    (tree-sitter-require lang)))
+    (progn
+      (tree-sitter-require lang)
+      (let ((major-mode-name (intern (concat (symbol-name lang) "-mode")))
+            (major-ts-mode-name (intern (concat (symbol-name lang) "-ts-mode"))))
+        (add-to-list 'major-mode-remap-alist
+                     `(,major-mode-name . ,major-ts-mode-name))))))
