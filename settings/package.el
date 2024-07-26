@@ -56,6 +56,9 @@
     dockerfile-mode
     js2-mode
     yaml-mode
+
+    ;; ollama
+    ellama
     ))
 
 ;; my/favorite-packagesからインストールしていないパッケージをインストール

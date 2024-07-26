@@ -99,6 +99,7 @@
 (load "~/.emacs.d/settings/skk.el")
 (load "~/.emacs.d/settings/undo-tree.el")
 (load "~/.emacs.d/settings/yasnippet.el")
+(load "~/.emacs.d/settings/ellama.el")
 
 ;; LSP
 ;; (load "~/.emacs.d/settings/lsp.el")

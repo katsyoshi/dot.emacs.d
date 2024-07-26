@@ -12,6 +12,7 @@
      (java "https://github.com/tree-sitter/tree-sitter-java")
      (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
      (json "https://github.com/tree-sitter/tree-sitter-json")
+     (kdl "https://github.com/tree-sitter-grammars/tree-sitter-kdl")
      (make "https://github.com/alemuller/tree-sitter-make")
      (markdown "https://github.com/ikatyang/tree-sitter-markdown")
      (python "https://github.com/tree-sitter/tree-sitter-python")
@@ -23,13 +24,17 @@
      (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
      (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
 
+;; auto settings
 (dolist (lang (mapcar #'car treesit-language-source-alist))
   (unless (treesit-language-available-p lang)
     (treesit-install-language-grammar lang))
-  (unless (eq lang 'rbs)
+  (unless (or (eq lang 'rbs) (eq lang 'kdl))
     (progn
       (tree-sitter-require lang)
       (let ((major-mode-name (intern (concat (symbol-name lang) "-mode")))
             (major-ts-mode-name (intern (concat (symbol-name lang) "-ts-mode"))))
         (add-to-list 'major-mode-remap-alist
                      `(,major-mode-name . ,major-ts-mode-name))))))
+
+;; load extra language configurations
+(load "~/.emacs.d/settings/tree-sitter/javascript")
