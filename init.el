@@ -1,118 +1,15 @@
 ;; .emacs.d/init.el
-;; set font and background color
-(set-background-color "#282a36")
-(set-foreground-color "#f8f8f2")
-(set-cursor-color "#ccccc7")
-;; バックスペース
-(global-set-key (kbd "C-h") 'delete-backward-char)
-;; ヘルプ
-(global-set-key (kbd "C-c h") 'help)
-;; ウィンドウ移動
-(global-set-key (kbd "C-c <left>")  'windmove-left)
-(global-set-key (kbd "C-c <down>")  'windmove-down)
-(global-set-key (kbd "C-c <up>")    'windmove-up)
-(global-set-key (kbd "C-c <right>") 'windmove-right)
-;; set key maps
-(global-set-key (kbd "C-c C-a") 'align-regexp)
-(global-set-key (kbd "C-c C-r") 'revert-buffer)
-(setq-default indent-tabs-mode nil)
 ;; load font
-(load "~/.emacs.d/settings/font.el")
-;; いんすとーるぱっけーじもーで
-(load "~/.emacs.d/settings/package.el")
-
-;; set switch buffer keybind
-(global-set-key (kbd "C-x C-b") 'switch-to-buffer)
-
-;; Load PATH
-(load "~/.emacs.d/settings/load-path.el")
-
-;; パス設定
-(exec-path-from-shell-initialize)
-
-;; whitespace
-(setq-default show-trailing-whitespace t)
-(setq whitespace-style
-      '(tabs tab-mark spaces space-mark))
-(setq whitespace-space-regexp "\\(\x3000+\\)")
-(setq whitespace-display-mappings
-      '((space-mark ?\x3000 [?\□])
-        (tab-mark   ?\t   [?\xBB ?\t])
-        ))
-(require 'whitespace)
-(global-whitespace-mode 1)
-(set-face-foreground 'whitespace-space "LightSlateGray")
-(set-face-background 'whitespace-space "DarkSlateGray")
-(set-face-foreground 'whitespace-tab "LightSlateGray")
-(set-face-background 'whitespace-tab "DarkSlateGray")
-
-;; default settings
-;; デフォルトの設定
-;; Japanese
-;; 日本語
-(set-language-environment 'Japanese)
-(prefer-coding-system 'utf-8)
-;; Cursor
-;; カーソルの色
-(set-cursor-color "light blue")
-;; clipboard
-(setq select-enable-clipboard t)
-
-;; consult設定
-(load "~/.emacs.d/settings/ivy.el")
-(load "~/.emacs.d/settings/vertico.el")
-;; migemo 設定
-(load "~/.emacs.d/settings/migemo.el")
-
-;; ウインドウのサイズとツールバーの表示
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-;; 画像表示
-(auto-image-file-mode t)
-(auto-compression-mode t)
-
-;; server settings
-(load "~/.emacs.d/settings/server.el")
-;; flycheck
-(require 'flycheck)
-(pixel-scroll-mode 1)
-
-;; rectangle mark
-(global-set-key (kbd "C-<return>") 'rectangle-mark-mode)
-
-;; ;; backup
-(setq make-backup-files t)
-(setq backup-directory-alist
-      (cons (cons "\\.*$" (expand-file-name "~/.bak"))
-            backup-directory-alist))
-;; load doom
-(load "~/.emacs.d/settings/doom.el")
-;; load theme
-(load-theme 'material t)
-
-(load "~/.emacs.d/settings/treesitter.el")
-
-(load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/git.el")
-(load "~/.emacs.d/settings/markdown.el")
-(load "~/.emacs.d/settings/multi-cursors.el")
-(load "~/.emacs.d/settings/skk.el")
-(load "~/.emacs.d/settings/undo-tree.el")
-(load "~/.emacs.d/settings/yasnippet.el")
-(load "~/.emacs.d/settings/ellama.el")
-
-;; LSP
-;; (load "~/.emacs.d/settings/lsp.el")
-(load "~/.emacs.d/settings/eglot.el")
-;; (load "~/.emacs.d/settings/copilot.el")
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("90a6f96a4665a6a56e36dec873a15cbedf761c51ec08dd993d6604e32dd45940" "f149d9986497e8877e0bd1981d1bef8c8a6d35be7d82cba193ad7e46f0989f6a" "45b84ddcc65bdf01d9cc76061a9473e3291d82c9209eac0694fbbb81c57b92fd" "5e5771e6ea0c9500aa87e987ace1d9f401585e22a976777b6090a1554f3771c6" "efd849c804148b88536914ccdee08285fd7376e2e3334522c9afc00fd7e594da" "013728cb445c73763d13e39c0e3fd52c06eefe3fbd173a766bfd29c6d040f100" "f64189544da6f16bab285747d04a92bd57c7e7813d8c24c30f382f087d460a33" "9013233028d9798f901e5e8efb31841c24c12444d3b6e92580080505d56fd392" "dfb1c8b5bfa040b042b4ef660d0aab48ef2e89ee719a1f24a4629a0c5ed769e8" "81f53ee9ddd3f8559f94c127c9327d578e264c574cda7c6d9daddaec226f87bb" "014cb63097fc7dbda3edf53eb09802237961cbb4c9e9abd705f23b86511b0a69" "4990532659bb6a285fee01ede3dfa1b1bdf302c5c3c8de9fad9b6bc63a9252f7" "38c0c668d8ac3841cb9608522ca116067177c92feeabc6f002a27249976d7434" "dccf4a8f1aaf5f24d2ab63af1aa75fd9d535c83377f8e26380162e888be0c6a9" "4e2e42e9306813763e2e62f115da71b485458a36e8b4c24e17a2168c45c9cf9d" "4ade6b630ba8cbab10703b27fd05bb43aaf8a3e5ba8c2dc1ea4a2de5f8d45882" "7e377879cbd60c66b88e51fad480b3ab18d60847f31c435f15f5df18bdb18184" "93011fe35859772a6766df8a4be817add8bfe105246173206478a0706f88b33d" "4b6cc3b60871e2f4f9a026a5c86df27905fb1b0e96277ff18a76a39ca53b82e1" "34cf3305b35e3a8132a0b1bdf2c67623bc2cb05b125f8d7d26bd51fd16d547ec" "00cec71d41047ebabeb310a325c365d5bc4b7fab0a681a2a108d32fb161b4006" "c1d5759fcb18b20fd95357dcd63ff90780283b14023422765d531330a3d3cec2" "02d422e5b99f54bd4516d4157060b874d14552fe613ea7047c4a5cfa1288cf4f" "37b6695bae243145fa2dfb41440c204cd22833c25cd1993b0f258905b9e65577" "8d3ef5ff6273f2a552152c7febc40eabca26bae05bd12bc85062e2dc224cde9a" "b5fd9c7429d52190235f2383e47d340d7ff769f141cd8f9e7a4629a81abc6b19" "f4d1b183465f2d29b7a2e9dbe87ccc20598e79738e5d29fc52ec8fb8c576fcfd" "dd4582661a1c6b865a33b89312c97a13a3885dc95992e2e5fc57456b4c545176" "456697e914823ee45365b843c89fbc79191fdbaff471b29aad9dcbe0ee1d5641" "8b148cf8154d34917dfc794b5d0fe65f21e9155977a36a5985f89c09a9669aa0" "7ec8fd456c0c117c99e3a3b16aaf09ed3fb91879f6601b1ea0eeaee9c6def5d9" "56044c5a9cc45b6ec45c0eb28df100d3f0a576f18eef33ff8ff5d32bac2d9700" "691d671429fa6c6d73098fc6ff05d4a14a323ea0a18787daeb93fde0e48ab18b" "e3daa8f18440301f3e54f2093fe15f4fe951986a8628e98dcd781efbec7a46f2" "6c9965a9d0ca50e7a192f56ece0287a197c4f915f34fb61c5147fd1356e60289" "1508116c09dc5ac1fecf39f3e1aa5a7d5af079bef34be893e18bb2122a326b28" "9f10d6fc85c18e7dd3f162e4aacdf17fc3f2121743a74c221098d2495acab3a4" "d5e2a3022bbe141a0f42a05993aea7b155a38286d31e57a310c33824bef9cafe" "4b730eb92d8f30382ef1404bf34a81f465c9da9c6fb18371abe577911c833e33" "78a14b7416893d979174135c39d456f8db0b66698e09f7649bec8eb4cbb03082" "4594d6b9753691142f02e67b8eb0fda7d12f6cc9f1299a49b819312d6addad1d" "aec7b55f2a13307a55517fdf08438863d694550565dee23181d2ebd973ebd6b8" "571661a9d205cb32dfed5566019ad54f5bb3415d2d88f7ea1d00c7c794e70a36" "10e5d4cc0f67ed5cafac0f4252093d2119ee8b8cb449e7053273453c1a1eb7cc" "ffafb0e9f63935183713b204c11d22225008559fa62133a69848835f4f4a758c" default))
  '(package-selected-packages
-   '(region-bindings-mode lsp-mode web-mode graphviz-dot-mode eglot tree-sitter-langs tree-sitter lsp-origami origami rjsx-mode graphql-mode typescript-mode go-mode yaml-mode rust-mode neotree minimap magit lua-mode lsp-ui js2-mode ivy-rich hydra hide-mode-line flycheck fill-column-indicator exec-path-from-shell doom-themes doom-modeline doom dockerfile-mode ddskk counsel company-lsp company-box ccls all-the-icons-ivy ace-window)))
+   '(mozc ellama tao-theme tango-plus-theme hyperstitional-themes consult-company consult-eglot iceberg-theme kanagawa-theme editorconfig slim-mode vue-mode rbs-mode 0blayout material-theme github-modern-theme github-theme django-theme gruvbox-theme tree-sitter-ispell 0xc mistty region-bindings-mode lsp-mode web-mode graphviz-dot-mode eglot tree-sitter-langs tree-sitter lsp-origami origami rjsx-mode graphql-mode typescript-mode go-mode yaml-mode rust-mode neotree minimap magit lua-mode lsp-ui js2-mode ivy-rich hydra hide-mode-line flycheck fill-column-indicator exec-path-from-shell doom-themes doom-modeline doom dockerfile-mode ddskk counsel company-lsp company-box ccls all-the-icons-ivy ace-window)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
