@@ -1,8 +1,8 @@
 (setq 4k '(3840 2160))
 (setq fhd '(1920 1080))
 (setq default-font-height 100)
-(setq 4k-font-height 120)
-(setq fhd-font-height 120)
+(setq 4k-font-height 140)
+(setq fhd-font-height 160)
 (setq default-display-width 10) ;; maybe default display size
 (setq default-display-height 9) ;; maybe default display size
 
@@ -20,7 +20,7 @@
        (setq font-height 4k-font-height)))
 
 ;; フォント設定
-(set-face-attribute 'default nil :family "Noto Sans Mono CJK JP" :height font-height)
+(set-face-attribute 'default nil :family "Cica" :height font-height)
 
 (global-set-key (kbd "s-C-u") 'text-scale-increase)
 (global-set-key (kbd "s-C-l") 'text-scale-decreae)
