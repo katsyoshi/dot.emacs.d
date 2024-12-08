@@ -28,7 +28,7 @@
 (dolist (lang (mapcar #'car treesit-language-source-alist))
   (unless (treesit-language-available-p lang)
     (treesit-install-language-grammar lang))
-  (unless (or (eq lang 'rbs) (eq lang 'kdl))
+  (unless (or (eq lang 'rbs) (eq lang 'kdl) (eq lang 'markdown))
     (progn
       (tree-sitter-require lang)
       (let ((major-mode-name (intern (concat (symbol-name lang) "-mode")))

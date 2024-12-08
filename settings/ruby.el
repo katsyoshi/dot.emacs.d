@@ -15,6 +15,16 @@
 (autoload 'inf-ruby-keys
   "inf-ruby" "Set local key defs for inf-ruby in ruby-ts-mode")
 
+(defun exec-bundle-update-for-emacs-shortcuts ()
+  "Update Emacs shortcuts using the Bundle package manager."
+  (interactive)
+  (shell-command-to-string "bundle update"))
+
+(defun my/exec-bundle-update-for-emacs-shortcuts ()
+  (local-set-key (kbd "C-c b u") 'exec-bundle-update-for-emacs-shortcuts))
+
+(add-hook 'ruby-mode-hook 'my/exec-bundle-update-for-emacs-shortcuts)
+
 (setq ruby-deep-indent-paren nil)
 (setq ruby-deep-indent-construct nil)
 
