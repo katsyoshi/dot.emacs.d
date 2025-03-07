@@ -1,6 +1,9 @@
 ;; .emacs.d/init.el
-;; load font
+
 (load "~/.emacs.d/settings/git.el")
+(load "~/.emacs.d/settings/markdown.el")
+(load "~/.emacs.d/settings/copilot.el")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

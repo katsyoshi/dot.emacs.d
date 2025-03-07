@@ -40,7 +40,7 @@
 (auto-image-file-mode t)
 (auto-compression-mode t)
 ;; flycheck
-(require 'flycheck)
+;; (require 'flycheck)
 (pixel-scroll-mode 1)
 
 ;; rectangle mark
