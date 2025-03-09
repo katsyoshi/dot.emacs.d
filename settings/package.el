@@ -59,7 +59,10 @@
 
     ;; ollama
     ellama
-    ))
+
+    ;; copilot
+    copilot
+    copilot-chat))
 
 ;; my/favorite-packagesからインストールしていないパッケージをインストール
 (dolist (package my/favorite-packages)
