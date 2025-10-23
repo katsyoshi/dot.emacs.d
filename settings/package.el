@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (fset 'package-desc-vers 'package--ac-desc-version)
@@ -26,13 +27,19 @@
     vertico
     web-mode
 
-    ;; all-the-icons
-    all-the-icons
-    all-the-icons-ivy
-    all-the-icons-ivy-rich
+    ;; completion helpers
+    auto-complete
+
+    ;; AI / LLM integrations
+    chatgpt-shell
+    copilot
+    copilot-chat
+    ellama
+    ;; llm-ollama is loaded opportunistically because it is not packaged
 
     ;; consult
     consult-flycheck
+    consult-hatena-bookmark
 
     ;; visual thema
     ace-window
@@ -53,18 +60,35 @@
     material-theme
 
     ;; language packages
+    ccls
     dockerfile-mode
+    go-mode
+    graphviz-dot-mode
+    helm
     js2-mode
+    mastodon
+    plantuml-mode
+    rbs-mode
+    rust-mode
+    scala-mode
+    textile-mode
+    tsx-mode
+    twittering-mode
     yaml-mode
 
-    ;; ollama
-    ellama
+    ;; claude
+    claude-code
 
-    ;; copilot
-    copilot
-    copilot-chat))
+    ;; lsp and tooling
+    lsp-mode
+    lsp-ui
+    term+
+    e2wm
+    ))
 
 ;; my/favorite-packagesからインストールしていないパッケージをインストール
 (dolist (package my/favorite-packages)
   (unless (package-installed-p package)
-    (package-install package)))
+    (condition-case err
+        (package-install package)
+      (error (message "Failed to install %s: %s" package err)))))

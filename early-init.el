@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (push '(menu-bar-lines . 0) default-frame-alist)
 (push '(tool-bar-lines . 0) default-frame-alist)
 (load "~/.emacs.d/settings/font.el")
@@ -35,6 +36,7 @@
 
 ;; server settings
 (load "~/.emacs.d/settings/server.el")
+(load "~/.emacs.d/settings/git.el")
 
 ;; 画像表示
 (auto-image-file-mode t)
@@ -60,6 +62,8 @@
 ;; load treesitter settings
 (load "~/.emacs.d/settings/treesitter.el")
 
+(load "~/.emacs.d/settings/claude-code.el")
+(load "~/.emacs.d/settings/copilot.el")
 (load "~/.emacs.d/settings/company.el")
 (load "~/.emacs.d/settings/markdown.el")
 (load "~/.emacs.d/settings/skk.el")

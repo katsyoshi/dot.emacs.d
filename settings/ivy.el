@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;; ivy設定
 (require 'ivy)
 (ivy-mode 1)

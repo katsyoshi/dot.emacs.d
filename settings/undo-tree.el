@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;; undo-tree
 (require 'undo-tree)
 (setq undo-tree-auto-save-history nil)

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (require 'magit)
 (setq magit-repository-directories '(("~/." . 5 )))
 

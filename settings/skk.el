@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 ;; SKK辞書
 ;; (let ((default-directory (expand-file-name "~/.emacs.d/share/skk/")))
 ;;  (add-to-list 'load-path default-directory)
@@ -35,4 +36,3 @@
             ;;                ("?" nil nil)
             ;;                ("!" nil nil))))
             ))
-

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (require 'company)
 (global-company-mode t)
 (setq company-transformers '(company-sort-by-backend-importance))

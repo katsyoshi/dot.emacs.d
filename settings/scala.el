@@ -1,2 +1,3 @@
-(require 'scala-mode-auto)
-(setq indent-tabs-mode t)
+;; -*- lexical-binding: t -*-
+(when (require 'scala-mode nil 'noerror)
+  (setq indent-tabs-mode t))

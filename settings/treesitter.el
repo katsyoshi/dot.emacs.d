@@ -1,5 +1,10 @@
-(require 'tree-sitter)
-(require 'tree-sitter-langs)
+;; -*- lexical-binding: t -*-
+(require 'treesit)
+
+(defconst dotemacs/tree-sitter-has-legacy
+  (and (require 'tree-sitter nil 'noerror)
+       (require 'tree-sitter-langs nil 'noerror))
+  "Non-nil when the external tree-sitter packages are available.")
 
 (setq treesit-language-source-alist
    '((bash "https://github.com/tree-sitter/tree-sitter-bash")
@@ -27,14 +32,23 @@
 ;; auto settings
 (dolist (lang (mapcar #'car treesit-language-source-alist))
   (unless (treesit-language-available-p lang)
-    (treesit-install-language-grammar lang))
-  (unless (or (eq lang 'rbs) (eq lang 'kdl) (eq lang 'markdown))
-    (progn
-      (tree-sitter-require lang)
-      (let ((major-mode-name (intern (concat (symbol-name lang) "-mode")))
-            (major-ts-mode-name (intern (concat (symbol-name lang) "-ts-mode"))))
+    (when (fboundp 'treesit-install-language-grammar)
+      (ignore-errors
+        (treesit-install-language-grammar lang))))
+  (unless (memq lang '(rbs kdl markdown))
+    (let ((major-mode-name (intern (concat (symbol-name lang) "-mode")))
+          (major-ts-mode-name (intern (concat (symbol-name lang) "-ts-mode"))))
+      (when (and (fboundp major-mode-name)
+                 (fboundp major-ts-mode-name))
         (add-to-list 'major-mode-remap-alist
-                     `(,major-mode-name . ,major-ts-mode-name))))))
+                     `(,major-mode-name . ,major-ts-mode-name))))
+    (when (and dotemacs/tree-sitter-has-legacy
+               (fboundp 'tree-sitter-require))
+      (ignore-errors
+        (tree-sitter-require lang)))))
 
 ;; load extra language configurations
-(load "~/.emacs.d/settings/tree-sitter/javascript")
+(let ((javascript-config (expand-file-name "settings/tree-sitter/javascript"
+                                           user-emacs-directory)))
+  (when (file-readable-p (concat javascript-config ".el"))
+    (load javascript-config nil 'nomessage)))

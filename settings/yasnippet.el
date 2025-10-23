@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (require 'yasnippet)
 (global-set-key (kbd "C-c y") 'yas-insert-snippet)
 

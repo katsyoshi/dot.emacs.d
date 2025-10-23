@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t -*-
 (require 'doom-themes)
 (require 'doom-modeline)
 (doom-modeline-mode 1)

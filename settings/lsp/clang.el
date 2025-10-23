@@ -1,1 +1,2 @@
-(require 'ccls)
+;; -*- lexical-binding: t -*-
+(require 'ccls nil 'noerror)

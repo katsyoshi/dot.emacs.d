@@ -1,20 +1,21 @@
-(require 'lsp-mode)
-(require 'lsp-ui)
+;; -*- lexical-binding: t -*-
+(when (require 'lsp-mode nil 'noerror)
+  (when (require 'lsp-ui nil 'noerror)
+    (add-hook 'lsp-mode-hook #'lsp-ui-mode))
 
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  ;; company integration
+  (when (require 'company nil 'noerror)
+    (company-mode 1)
+    (when (require 'company-box nil 'noerror)
+      (add-hook 'company-mode-hook #'company-box-mode)))
 
-;; company
-(require 'company)
-(company-mode 1)
+  (setq lsp-prefer-capf t)
 
-;; company box
-(require 'company-box)
-(add-hook 'company-mode-hook 'company-box-mode)
-
-(setq lsp-prefer-capf t)
-
-;; load lsp configuration
-(load "~/.emacs.d/settings/lsp/ruby.el")
-(load "~/.emacs.d/settings/lsp/rust.el")
-(load "~/.emacs.d/settings/lsp/yaml.el")
-(load "~/.emacs.d/settings/lsp/web.el")
+  ;; load lsp configuration modules when present
+  (dolist (module '("settings/lsp/ruby"
+                    "settings/lsp/rust"
+                    "settings/lsp/yaml"
+                    "settings/lsp/web"))
+    (let ((path (expand-file-name module user-emacs-directory)))
+      (when (file-readable-p (concat path ".el"))
+        (load path nil 'nomessage)))))

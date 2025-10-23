@@ -1,9 +1,13 @@
+;; -*- lexical-binding: t -*-
 ;; (setq load-path 
 ;;       (cons "~/.emacs.d/site-lisp/erlang-mode/" load-path))
-(cond ((string-match "darwin" system-configuration)
-       (setq erlang-root-dir "/opt/local/lib/erlang")
-       (setq erlang-path "/opt/local/lib/erlang/bin" exec-path))
-      ((string-match "freebsd" system-configuration)
-       (setq erlang-root-dir "/usr/local/lib/erlang")
-       (setq erlang-path "/usr/local/lib/erlang/bin" exec-path)))
-(require 'erlang-start)
+(let ((root (cond ((string-match "darwin" system-configuration)
+                   "/opt/local/lib/erlang")
+                  ((string-match "freebsd" system-configuration)
+                   "/usr/local/lib/erlang"))))
+  (when root
+    (setq erlang-root-dir root)
+    (add-to-list 'exec-path (expand-file-name "bin" root))))
+
+(when (require 'erlang-start nil 'noerror)
+  (message "Erlang mode loaded."))
