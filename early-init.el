@@ -17,7 +17,9 @@
 (load "~/.emacs.d/settings/load-path.el")
 
 ;; パス設定
+(autoload 'exec-path-from-shell-initialize "exec-path-from-shell" nil t)
 (exec-path-from-shell-initialize)
+
 ;; consult設定
 (load "~/.emacs.d/settings/ivy.el")
 (load "~/.emacs.d/settings/vertico.el")
