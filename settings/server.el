@@ -1,4 +1,9 @@
 ;; -*- lexical-binding: t -*-
 (require 'server)
-(cond
- ((string-match "" server-name) (setq server-name "katsyoshi")))
+(setq server-name
+      (or (and (boundp 'my-profile) my-profile)
+          (getenv "EMACS_PROFILE")
+          (and (boundp 'daemon-name) daemon-name)
+          "default"))
+(unless (server-running-p server-name)
+  (server-start))

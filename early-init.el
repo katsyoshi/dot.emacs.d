@@ -1,6 +1,14 @@
 ;; -*- lexical-binding: t -*-
 (push '(menu-bar-lines . 0) default-frame-alist)
 (push '(tool-bar-lines . 0) default-frame-alist)
+;; initialize profile
+(defconst my-profile
+  (or (getenv "EMACS_PROFILE")
+      (and (boundp 'daemon-name) daemon-name)
+      "default"))
+(setq recentf-save-file
+      (expand-file-name (format "recentf-%s" my-profile) user-emacs-directory))
+
 (load "~/.emacs.d/settings/font.el")
 ;; いんすとーるぱっけーじもーで
 (load "~/.emacs.d/settings/package.el")
