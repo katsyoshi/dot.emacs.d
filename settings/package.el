@@ -12,6 +12,7 @@
     exec-path-from-shell
     company
     company-box
+    corfu
     consult
     counsel
     ddskk
@@ -72,11 +73,10 @@
     rust-mode
     scala-mode
     textile-mode
-    tsx-mode
-    twittering-mode
     yaml-mode
 
-    ;; claude
+    ;; ai
+    codex-cli
     claude-code
 
     ;; lsp and tooling
