@@ -21,7 +21,7 @@
        (setq font-height 4k-font-height)))
 
 ;; フォント設定
-(set-face-attribute 'default nil :family "MoralerspaceNeon" :height font-height)
+(set-face-attribute 'default nil :family "Moralerspace Neon JPDOC" :height font-height)
 
 (global-set-key (kbd "s-C-u") 'text-scale-increase)
 (global-set-key (kbd "s-C-l") 'text-scale-decreae)
