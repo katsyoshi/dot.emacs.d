@@ -71,11 +71,10 @@
 
 ;; load treesitter settings
 (load "~/.emacs.d/settings/treesitter.el")
-(load "~/.emacs.d/settings/vterm.el")
-
 (load "~/.emacs.d/settings/copilot.el")
 (load "~/.emacs.d/settings/corfu.el")
 (load "~/.emacs.d/settings/kdl.el")
+(load "~/.emacs.d/settings/java.el")
 (load "~/.emacs.d/settings/markdown.el")
 (load "~/.emacs.d/settings/skk.el")
 (load "~/.emacs.d/settings/undo-tree.el")

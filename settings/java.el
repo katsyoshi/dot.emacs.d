@@ -1,4 +1,2 @@
-(add-hook 'java-ts-mode-hook
-   (lambda()
-     (setq indent-tabs-mode nil)
-     (setq c-basic-offset 2)))
+(setq java-ts-mode-indent-tabs-mode nil)
+(setq java-ts-mode-indent-offset 2)
