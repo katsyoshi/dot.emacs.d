@@ -21,8 +21,8 @@
 (exec-path-from-shell-initialize)
 
 ;; consult設定
-(load "~/.emacs.d/settings/ivy.el")
 (load "~/.emacs.d/settings/vertico.el")
+
 ;; migemo 設定
 (load "~/.emacs.d/settings/migemo.el")
 
@@ -80,6 +80,7 @@
 (load "~/.emacs.d/settings/undo-tree.el")
 (load "~/.emacs.d/settings/yasnippet.el")
 (load "~/.emacs.d/settings/ellama.el")
+(load "~/.emacs.d/settings/ruby.el")
 
 ;; LSP
 ;; (load "~/.emacs.d/settings/lsp.el")

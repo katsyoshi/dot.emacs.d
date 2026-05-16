@@ -1,5 +1,3 @@
-(tree-sitter-require 'ruby)
-(add-to-list 'tree-sitter-major-mode-language-alist '(ruby-ts-mode . ruby))
 (add-to-list 'interpreter-mode-alist '("ruby" . ruby-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.cgi$" . ruby-ts-mode))
