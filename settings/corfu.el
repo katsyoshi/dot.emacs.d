@@ -11,5 +11,5 @@
 ;; Keep Enter as default completion key and add only navigation keys.
 (define-key corfu-map (kbd "TAB") #'indent-for-tab-command)
 (define-key corfu-map (kbd "<tab>") #'indent-for-tab-command)
-(define-key corfu-map (kbd "C-S-n") #'corfu-next)
-(define-key corfu-map (kbd "C-S-p") #'corfu-previous)
+(define-key corfu-map (kbd "C-n") #'corfu-next)
+(define-key corfu-map (kbd "C-p") #'corfu-previous)
