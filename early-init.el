@@ -21,6 +21,7 @@
 (exec-path-from-shell-initialize)
 
 ;; consult設定
+(load "~/.emacs.d/settings/consult.el")
 (load "~/.emacs.d/settings/vertico.el")
 
 ;; migemo 設定
