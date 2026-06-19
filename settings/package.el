@@ -48,6 +48,7 @@
     doom-themes
 
     ;; languages
+    inf-ruby
     js2-mode
     rbs-mode
     ))
