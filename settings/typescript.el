@@ -1,1 +1,1 @@
-(tree-sitter-require 'typescript)
+;; Customize TypeScript settings here.

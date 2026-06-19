@@ -48,4 +48,5 @@
       (when (> offset 0) (forward-char offset)))))
 (setq ruby-insert-encoding-magic-comment nil)
 
-(add-hook 'ruby-ts-mode-hook 'inf-ruby-minor-mode)
+(when (require 'inf-ruby nil 'noerror)
+  (add-hook 'ruby-ts-mode-hook #'inf-ruby-minor-mode))

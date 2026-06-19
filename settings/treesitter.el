@@ -52,3 +52,8 @@
                                            user-emacs-directory)))
   (when (file-readable-p (concat javascript-config ".el"))
     (load javascript-config nil 'nomessage)))
+
+(let ((rbs-config (expand-file-name "settings/tree-sitter/rbs"
+                                    user-emacs-directory)))
+  (when (file-readable-p (concat rbs-config ".el"))
+    (load rbs-config nil 'nomessage)))
