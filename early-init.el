@@ -6,12 +6,17 @@
   (or (getenv "EMACS_PROFILE")
       (and (boundp 'daemon-name) daemon-name)
       "default"))
+(setq custom-file (expand-file-name ".custom.el" user-emacs-directory))
+(load custom-file 'noerror 'nomessage)
 (setq recentf-save-file
       (expand-file-name (format "recentf-%s" my-profile) user-emacs-directory))
 
 (load "~/.emacs.d/settings/font.el")
-;; いんすとーるぱっけーじもーで
-(load "~/.emacs.d/settings/package.el")
+
+;; Package settings used later in early-init.el must be activated here.
+(require 'package)
+(fset 'package-desc-vers 'package--ac-desc-version)
+(package-initialize)
 
 ;; Load PATH
 (load "~/.emacs.d/settings/load-path.el")

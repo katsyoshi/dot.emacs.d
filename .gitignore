@@ -6,6 +6,7 @@
 /**/*.gif
 /**/*.doc
 /server.socket
+/.custom.el
 /.bzrignore
 /.cache
 /.dap-breakpoints
