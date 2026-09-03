@@ -1,0 +1,41 @@
+# startup
+exec-path-from-shell
+
+# completion
+corfu
+consult
+marginalia
+orderless
+vertico
+
+# editing
+flycheck
+markdown-mode
+undo-tree
+yasnippet
+
+# input
+ddskk
+ddskk-posframe
+
+# search
+dash
+migemo
+s
+
+# git
+magit
+
+# AI / LLM
+chatgpt-shell
+copilot
+ellama
+
+# appearance
+doom-modeline
+doom-themes
+
+# languages
+inf-ruby
+js2-mode
+rbs-mode
