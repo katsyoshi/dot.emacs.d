@@ -6,6 +6,7 @@
   (or (getenv "EMACS_PROFILE")
       (and (boundp 'daemon-name) daemon-name)
       "default"))
+(load "~/.emacs.d/settings/my-profile-vals.el")
 (setq custom-file (expand-file-name ".custom.el" user-emacs-directory))
 (load custom-file 'noerror 'nomessage)
 (setq recentf-save-file
